@@ -1,1897 +1,1622 @@
-<a name="24.3.0"></a>
-# [24.3.0](https://github.com/sparanoid/sparanoid.com/compare/v24.2.4...v24.3.0) (2018-07-23)
-
+## Unreleased
 
 ### Bug Fixes
 
-* **post:** typo for “HSTS for Amazon CloudFront” ([c6dd75e](https://github.com/sparanoid/sparanoid.com/commit/c6dd75e))
-* **post:** typo in “Amazon S3 × CloudFront” ([20d6c6f](https://github.com/sparanoid/sparanoid.com/commit/20d6c6f))
-* **post:** typo in “Kai Series” ([c6bef6e](https://github.com/sparanoid/sparanoid.com/commit/c6bef6e))
+- Fix unlisted YouTube video embeds in documentation/test sites. [#3649](https://github.com/mmistakes/minimal-mistakes/issues/3649)
+- Fix error in Algolia search script when returning a hit that without `html` and `hightlight.html`. [#3101](https://github.com/mmistakes/minimal-mistakes/issues/3101) [#3102](https://github.com/mmistakes/minimal-mistakes/pull/3102)
+- Fix links to Font Awesome gallery. [#3599](https://github.com/mmistakes/minimal-mistakes/pull/3599)
+- Fix GreedyNav.js attribution link. [#3553](https://github.com/mmistakes/minimal-mistakes/pull/3553)
+- Fix typo about loading JavaScript in layout documentation. [#3350](https://github.com/mmistakes/minimal-mistakes/pull/3350)
+- Fix inline code style not applied to stylized text. [#3253](https://github.com/mmistakes/minimal-mistakes/pull/3253)
+- Fix documentation typos. [#3232](https://github.com/mmistakes/minimal-mistakes/pull/3232) [#3318](https://github.com/mmistakes/minimal-mistakes/pull/3318)
+- Fix Keybase icon in author sidebar. [#3221](https://github.com/mmistakes/minimal-mistakes/pull/3221)
+- Fix sort order of Staticman comments when data files aren't named alphabetically. [#3184](https://github.com/mmistakes/minimal-mistakes/pull/3184)
+- Fix `layout: compress` issue with HTML comment in video include. [#3117](https://github.com/mmistakes/minimal-mistakes/pull/3117)
+- Add Magnific Popup class to anchors that only contain an `img` element. [#3111](https://github.com/mmistakes/minimal-mistakes/issues/3111) [#3114](https://github.com/mmistakes/minimal-mistakes/pull/3114)
+- Enable Magnific Popups on anchors only when they wrap an `<img>` element. [#3114](https://github.com/mmistakes/minimal-mistakes/pull/3114)
+- Fix heading level of related posts section from `h4` to `h2` to improve accessibility and SEO. [#3064](https://github.com/mmistakes/minimal-mistakes/pull/3064)
+- Fix grammar error in German localized UI text string. [#3063](https://github.com/mmistakes/minimal-mistakes/pull/3063)
+- Remove site.url from first breadcrumb link. [#3051](https://github.com/mmistakes/minimal-mistakes/pull/3051)
 
+### Enhancements
 
-### Features
+- Update breadcrumbs conditional to enable/disable them via Front Matter on pages using `layout: single`. [#3096](https://github.com/mmistakes/minimal-mistakes/pull/3096) [#3669](https://github.com/mmistakes/minimal-mistakes/pull/3669)
+- Remove Internet Explorer 9 upgrade notice. [#3666](https://github.com/mmistakes/minimal-mistakes/pull/3666)
+- Add Kiswahili localized UI text strings. [#3489](https://github.com/mmistakes/minimal-mistakes/pull/3489)
+- Exclude `main.scss` from Lunr search index.
+- Allow `site.pages` to be indexed and searched via Lunr. [#3352](https://github.com/mmistakes/minimal-mistakes/pull/3352)
+- Update jQuery to v3.6.0. [#3254](https://github.com/mmistakes/minimal-mistakes/pull/3254)
+- Use notice `<a>` colors for blockquotes that have `notice--` classes applied. [#3140](https://github.com/mmistakes/minimal-mistakes/pull/3140) [#3068](https://github.com/mmistakes/minimal-mistakes/issues/3068)
+- Add sameAs itemprop to author link. [#3087](https://github.com/mmistakes/minimal-mistakes/pull/3087)
+- Automatically close invalid PRs using GitHub Actions. [#3313](https://github.com/mmistakes/minimal-mistakes/pull/3313)
+- Update and add missing Brazilian Portuguese translations. [#3204](https://github.com/mmistakes/minimal-mistakes/pull/3204)
+- Add link to documentation clarifying how to add plugins. [#3181](https://github.com/mmistakes/minimal-mistakes/pull/3181)
+- Add optional label attribute for utterances comments. [#3128](https://github.com/mmistakes/minimal-mistakes/pull/3128)
+- Bump path-parse from 1.0.6 to 1.0.7. [#3116](https://github.com/mmistakes/minimal-mistakes/pull/3116)
+- Add missing Danish translations. [#3095](https://github.com/mmistakes/minimal-mistakes/pull/3095)
+- Add ARIA role to search forms. [#3086](https://github.com/mmistakes/minimal-mistakes/pull/3086)
+- Add overflow scroll bar to sticky table of contents that are taller than the viewport's height. [#2874](https://github.com/mmistakes/minimal-mistakes/pull/2874)
+- Add Microformats markup. [#3052](https://github.com/mmistakes/minimal-mistakes/pull/3052)
+- Add instructions on how to unminify `main.js` for easier browser debugging. [#3055](https://github.com/mmistakes/minimal-mistakes/pull/3055)
 
-* **favicon:** add border for Chrome Web App design ([76e2583](https://github.com/sparanoid/sparanoid.com/commit/76e2583))
-* **grunt:** remove deprecated `leading_quotes` support ([a0db190](https://github.com/sparanoid/sparanoid.com/commit/a0db190))
-* **home:** update copywriting ([407bb33](https://github.com/sparanoid/sparanoid.com/commit/407bb33))
-* **post:** add new comment ([3b0b50e](https://github.com/sparanoid/sparanoid.com/commit/3b0b50e))
-* **post:** add new post “HSTS for Amazon CloudFront” ([1f2a4c3](https://github.com/sparanoid/sparanoid.com/commit/1f2a4c3))
-* **post:** add notes for “Amazon S3 × CloudFront” ([a43c38d](https://github.com/sparanoid/sparanoid.com/commit/a43c38d))
-* **post:** fix links for “Amazon S3 × CloudFront” ([f4a2a8e](https://github.com/sparanoid/sparanoid.com/commit/f4a2a8e))
-* **post:** update plugin status for post “Slimpack” ([db87d41](https://github.com/sparanoid/sparanoid.com/commit/db87d41))
-* **post:** update readme for “Lightense Images” ([a42fa7d](https://github.com/sparanoid/sparanoid.com/commit/a42fa7d))
-* **post:** use markdown format ([30ff461](https://github.com/sparanoid/sparanoid.com/commit/30ff461))
-* larger favicon ([1548dc9](https://github.com/sparanoid/sparanoid.com/commit/1548dc9))
-
-
-
-<a name="24.2.4"></a>
-## [24.2.4](https://github.com/sparanoid/sparanoid.com/compare/v24.2.3...v24.2.4) (2017-01-19)
-
-
-### Bug Fixes
-
-* a temporary fix for accidently deleting `s3_website` config for sparanoid.com, n ([4cf81ac](https://github.com/sparanoid/sparanoid.com/commit/4cf81ac))
-* accidentally removed deploy config when update AMSF ([06d0888](https://github.com/sparanoid/sparanoid.com/commit/06d0888))
-* **post:** typo in post “HTTP/2 and ECDSA Cipher Suites” ([d3057a9](https://github.com/sparanoid/sparanoid.com/commit/d3057a9))
-* **post:** wrong domain in command for “DMARC” ([6296966](https://github.com/sparanoid/sparanoid.com/commit/6296966))
-* **post:** wrong URL that breaks SSL ([bde6486](https://github.com/sparanoid/sparanoid.com/commit/bde6486))
-* **template:** not compatible with latest AMSF ([ed63d22](https://github.com/sparanoid/sparanoid.com/commit/ed63d22))
-
-### Features
-
-* **amsf:** update AMSF with Service Worker support ([4731b2a](https://github.com/sparanoid/sparanoid.com/commit/4731b2a))
-* **donate:** try Stripe button ([7fdf3c1](https://github.com/sparanoid/sparanoid.com/commit/7fdf3c1))
-* **index:** simplify headline, props @gordianz ([fe69ba0](https://github.com/sparanoid/sparanoid.com/commit/fe69ba0))
-* **page:** update license info ([1400492](https://github.com/sparanoid/sparanoid.com/commit/1400492))
-* **page:** upudate copyright info (again) ([a3a33d7](https://github.com/sparanoid/sparanoid.com/commit/a3a33d7))
-* **post:** add new post “IKEA Stock Availability Checker” ([87570be](https://github.com/sparanoid/sparanoid.com/commit/87570be))
-* **post:** add new post “Omnibox NCR” ([9548221](https://github.com/sparanoid/sparanoid.com/commit/9548221))
-* **post:** add verify DMARC record for post “DMARC” ([6c6c1fd](https://github.com/sparanoid/sparanoid.com/commit/6c6c1fd))
-* **post:** reveal old posts in feed ([1c6d70a](https://github.com/sparanoid/sparanoid.com/commit/1c6d70a))
-* **post:** update content for “Amazon S3 × CloudFront” ([d2a9f84](https://github.com/sparanoid/sparanoid.com/commit/d2a9f84))
-* **post:** update doc for post “Lightense Images” ([3ef3e88](https://github.com/sparanoid/sparanoid.com/commit/3ef3e88))
-* **post:** update examples for “Lightense Images” ([36bf79f](https://github.com/sparanoid/sparanoid.com/commit/36bf79f))
-* **post:** update for “iTunes Artwork Grabber” ([e7434c3](https://github.com/sparanoid/sparanoid.com/commit/e7434c3))
-* **post:** use new Open Graph image for “Readability Buttons” ([dec697c](https://github.com/sparanoid/sparanoid.com/commit/dec697c))
-* **posts:** make links HTTPS ([6ebe030](https://github.com/sparanoid/sparanoid.com/commit/6ebe030))
-* **posts:** minor tweaks for post color scheme ([ff0cc19](https://github.com/sparanoid/sparanoid.com/commit/ff0cc19))
-* update ASMF, fix several Open Graph meta ([c81fbbd](https://github.com/sparanoid/sparanoid.com/commit/c81fbbd))
-* **posts:** update color scheme for WordPress plugins ([86ca2fd](https://github.com/sparanoid/sparanoid.com/commit/86ca2fd))
-* update AMSF to v1.1.0 ([4602008](https://github.com/sparanoid/sparanoid.com/commit/4602008))
-* **posts:** update heading images ([9a6e8bd](https://github.com/sparanoid/sparanoid.com/commit/9a6e8bd))
-* update favicons ([a16b9b1](https://github.com/sparanoid/sparanoid.com/commit/a16b9b1))
-* **posts:** update post thumbnails ([9e5826e](https://github.com/sparanoid/sparanoid.com/commit/9e5826e))
-* **style:** remove legacy style ([ce7a918](https://github.com/sparanoid/sparanoid.com/commit/ce7a918))
-
-
-
-<a name="24.2.3"></a>
-## [24.2.3](https://github.com/sparanoid/sparanoid.com/compare/v24.2.2...v24.2.3) (2016-11-07)
-
+## [4.24.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.24.0)
 
 ### Bug Fixes
 
-* **post:** dead external link ([55d6f4f](https://github.com/sparanoid/sparanoid.com/commit/55d6f4f))
+- Fix README text for Gumshoejs license. [#3024](https://github.com/mmistakes/minimal-mistakes/pull/3024)
+- Remove `tabindex="-1"` from `input` elements in `search.html` layout to allow them to be accessible by keyboard. [#2982](https://github.com/mmistakes/minimal-mistakes/issues/2982)
+- Fix broken sidebar image in sample post. [#3013](https://github.com/mmistakes/minimal-mistakes/issues/3013)
+- Fix broken links in Upgrading documentation. [#3004](https://github.com/mmistakes/minimal-mistakes/issues/3004)
 
-### Features
+### Enhancements
 
-* **index:** update copywriting ([6879ae6](https://github.com/sparanoid/sparanoid.com/commit/6879ae6))
-* **page:** update site description ([96ef2e7](https://github.com/sparanoid/sparanoid.com/commit/96ef2e7))
+- Remove IE9 flexbox fallback. [#3042](https://github.com/mmistakes/minimal-mistakes/pull/3042)
+- Remove `h2` from skip links navigation as it is not important for site structure. [#3012](https://github.com/mmistakes/minimal-mistakes/pull/3012)
+- Loads Font Awesome asynchronously. [#2967](https://github.com/mmistakes/minimal-mistakes/pull/2967)
+- Replace custom search icon SVG with Font Awesome icon. [#2774](https://github.com/mmistakes/minimal-mistakes/pull/2774)
+- Adds support for giscus comments. [#3022](https://github.com/mmistakes/minimal-mistakes/pull/3022)
 
+## [4.23.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.23.0)
 
+### Enhancements
 
-<a name="24.2.2"></a>
-## [24.2.2](https://github.com/sparanoid/sparanoid.com/compare/v24.2.1...v24.2.2) (2016-07-12)
-
-
-### Bug Fixes
-
-* **post:** missing download link variable in “Tianjin Project” ([f08f1c2](https://github.com/sparanoid/sparanoid.com/commit/f08f1c2))
-
-### Features
-
-* **post:** update “CloudFront Cost Control” ([a6f008e](https://github.com/sparanoid/sparanoid.com/commit/a6f008e))
-
-
-
-<a name="24.2.1"></a>
-## [24.2.1](https://github.com/sparanoid/sparanoid.com/compare/v24.2.0...v24.2.1) (2016-06-18)
-
+- Add Arabic (عربي) localized UI text strings. [#2936](https://github.com/mmistakes/minimal-mistakes/pull/2936)
+- Update onchange and uglify-js dependencies.
+- Document head and footer `custom.html` includes. [#2815](https://github.com/mmistakes/minimal-mistakes/pull/2815)
+- Color notices based on skin colors instead of fixed values. [#2887](https://github.com/mmistakes/minimal-mistakes/pull/2887)
+- Add configurable datetime format. [#2844](https://github.com/mmistakes/minimal-mistakes/pull/2844)
+- Add Baidu site verification [#2830](https://github.com/mmistakes/minimal-mistakes/pull/2830)
+- Add `alt` attribute to site logo. [#2529](https://github.com/mmistakes/minimal-mistakes/issues/2529) [#2824](https://github.com/mmistakes/minimal-mistakes/issues/2824)
 
 ### Bug Fixes
 
-* **email:** insecure signup form ([f9d3c8d](https://github.com/sparanoid/sparanoid.com/commit/f9d3c8d))
+- Fix menu toggle to properly show close icon when open.
+- Fix Jekyll environment note in configuration documentation. [#2912](https://github.com/mmistakes/minimal-mistakes/issues/2912)
+- Fix typo in Helpers documentation. [#2940](https://github.com/mmistakes/minimal-mistakes/pull/2940)
+- Remove all references to official public Staticman API instance. [#2818](https://github.com/mmistakes/minimal-mistakes/issues/2818) [#2831](https://github.com/mmistakes/minimal-mistakes/pull/2831)
+- Remove Google Search CSS. [#2852](https://github.com/mmistakes/minimal-mistakes/issues/2852) [#2855](https://github.com/mmistakes/minimal-mistakes/pull/2855)
 
-### Features
-
-* **config:** go HTTPS ([04e2974](https://github.com/sparanoid/sparanoid.com/commit/04e2974))
-* **email:** update newsletter provider from Campaign Monitor to MailChimp ([394cfc6](https://github.com/sparanoid/sparanoid.com/commit/394cfc6))
-
-
-
-<a name="24.2.0"></a>
-# [24.2.0](https://github.com/sparanoid/sparanoid.com/compare/v24.1.18...v24.2.0) (2016-06-06)
-
-
-### Features
-
-* **homepage:** simplify content ([3203608](https://github.com/sparanoid/sparanoid.com/commit/3203608))
-
-
-
-<a name="24.1.18"></a>
-## [24.1.18](https://github.com/sparanoid/sparanoid.com/compare/v24.1.17...v24.1.18) (2016-06-02)
-
+## [4.22.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.22.0)
 
 ### Bug Fixes
 
-* **post:** single quotes for title “‘Free’ Dribbble Invite” ([e2c4f2f](https://github.com/sparanoid/sparanoid.com/commit/e2c4f2f))
-* **post:** wrong link in “Lightense Images” ([d2dd664](https://github.com/sparanoid/sparanoid.com/commit/d2dd664))
-* **post:** wrong syntax in code example in “Lightense Images” ([da95392](https://github.com/sparanoid/sparanoid.com/commit/da95392))
-* **post:** wrong thumbnail for “Almace Scaffolding” ([65180d5](https://github.com/sparanoid/sparanoid.com/commit/65180d5))
+- Remove Google Search script from `404.md`. [#2597](https://github.com/mmistakes/minimal-mistakes/issues/2597) [#2737](https://github.com/mmistakes/minimal-mistakes/pull/2737) [#2789](https://github.com/mmistakes/minimal-mistakes/pull/2789)
+- Fix Font Awesome icon color in `contrast`, `dark`, `mint`, `neon`, `plum`, and `sunrise` skins. [#2724](https://github.com/mmistakes/minimal-mistakes/issues/2724)
 
-### Features
+### Enhancements
 
-* **page:** update home for new theme structure ([b4b98b9](https://github.com/sparanoid/sparanoid.com/commit/b4b98b9))
-* **post:** add long-waiting post “Almace Scaffolding” ([3317fae](https://github.com/sparanoid/sparanoid.com/commit/3317fae))
-* **post:** add new post “Lightense Images” ([18c54b6](https://github.com/sparanoid/sparanoid.com/commit/18c54b6))
-* **post:** update color scheme for “Lightense Images” ([8bf199d](https://github.com/sparanoid/sparanoid.com/commit/8bf199d))
-* **post:** update Lightense Image custom background ([0389404](https://github.com/sparanoid/sparanoid.com/commit/0389404))
-* **post:** update post “Lightense Images” for new effect ([5efa37f](https://github.com/sparanoid/sparanoid.com/commit/5efa37f))
-* **posts:** update plugin from Intense to Lightense ([72cd324](https://github.com/sparanoid/sparanoid.com/commit/72cd324))
-* **script:** update LIghtense Images ([f92feea](https://github.com/sparanoid/sparanoid.com/commit/f92feea))
+- Allow custom sorting for collections. [#2723](https://github.com/mmistakes/minimal-mistakes/pull/2723)
+- Use `sort_natural` instead of custom Liquid logic to sort tags and categories. [#2756](https://github.com/mmistakes/minimal-mistakes/pull/2756)
+- Add configuration option to toggle off RSS feed link in `<head>` and site footer. [#2787](https://github.com/mmistakes/minimal-mistakes/pull/2787)
+- Upgrade Lunrjs to 2.3.9 and switch to `relative_url`. [#2805](https://github.com/mmistakes/minimal-mistakes/pull/2805)
+- Adds `.webp` to list of supported image extensions for the image popup lightbox. [#2788](https://github.com/mmistakes/minimal-mistakes/pull/2788)
+- Add Hebrew localized UI text strings. [#2760](https://github.com/mmistakes/minimal-mistakes/pull/2760)
+- Update documentation to include `toc_sticky` parameter's description. [#2741](https://github.com/mmistakes/minimal-mistakes/pull/2741)
+- Update Indonesian localized UI text strings. [#2731](https://github.com/mmistakes/minimal-mistakes/pull/2731)
+- Update remote theme documentation. [#2734](https://github.com/mmistakes/minimal-mistakes/pull/2734)
+- Update allejo/jekyll-toc to v1.1.0, skip headings without an ID. [#2752](https://github.com/mmistakes/minimal-mistakes/pull/2752)
+- Allow custom gradient for page header overlay. [#2806](https://github.com/mmistakes/minimal-mistakes/pull/2806)
 
-
-
-<a name="24.1.17"></a>
-## [24.1.17](https://github.com/sparanoid/sparanoid.com/compare/v24.1.16...v24.1.17) (2016-03-01)
-
+## [4.21.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.21.0)
 
 ### Bug Fixes
 
-* **amsf:** theme not updated ([6250d19](https://github.com/sparanoid/sparanoid.com/commit/6250d19))
-* **config:** missing robots rule ([ae4d85e](https://github.com/sparanoid/sparanoid.com/commit/ae4d85e))
-* **gem:** oops ([0c88da0](https://github.com/sparanoid/sparanoid.com/commit/0c88da0))
-* **jekyll:** config accidently changed to AMSF default config ([cc6ffdb](https://github.com/sparanoid/sparanoid.com/commit/cc6ffdb))
-* **post:** grammar error in “HTTP/2 and ECDSA Cipher Suites” ([004a56b](https://github.com/sparanoid/sparanoid.com/commit/004a56b))
-* **post:** looong word not wrapped ([b883ba9](https://github.com/sparanoid/sparanoid.com/commit/b883ba9))
-* **post:** minor tweaks ([a455894](https://github.com/sparanoid/sparanoid.com/commit/a455894))
-* **post:** missing highlighter language for “Amazon S3 × CloudFront” ([38ec802](https://github.com/sparanoid/sparanoid.com/commit/38ec802))
-* **post:** move post specific scripts to foot hook ([0cfd7bb](https://github.com/sparanoid/sparanoid.com/commit/0cfd7bb))
-* **post:** typo in “DMARC” ([ce6b6b8](https://github.com/sparanoid/sparanoid.com/commit/ce6b6b8))
-* **post:** wrong `openssl` protocol for “OCSP Stapling and Nginx” ([d99a954](https://github.com/sparanoid/sparanoid.com/commit/d99a954))
-* **post:** wrong link in “DMARC” ([36525a2](https://github.com/sparanoid/sparanoid.com/commit/36525a2))
-* **post:** wrong thumbnail for “Slimpack” ([5cfcb50](https://github.com/sparanoid/sparanoid.com/commit/5cfcb50))
-* **styles:** missing custom footnote decorations color ([48a9542](https://github.com/sparanoid/sparanoid.com/commit/48a9542))
+- Fix greedy navigation by improving reliability of remaining space for visible links. [#2664](https://github.com/mmistakes/minimal-mistakes/issues/2664)
+- Collapse white-space in `figure` helper to fix issues when used in Markdown ordered and unordered lists. [#2697](https://github.com/mmistakes/minimal-mistakes/pull/2697)
+- Fix dead link to CI services in documentation. [#2635](https://github.com/mmistakes/minimal-mistakes/issues/2635) [#2692](https://github.com/mmistakes/minimal-mistakes/pull/2692)
+- Fix a small typo in documentation. [#2718](https://github.com/mmistakes/minimal-mistakes/pull/2718)
 
-### Features
+### Enhancements
 
-* **config:** update records in `robots.txt` ([c56066d](https://github.com/sparanoid/sparanoid.com/commit/c56066d))
-* **docs:** update badges ([0513e6a](https://github.com/sparanoid/sparanoid.com/commit/0513e6a))
-* **feeds:** new feeds for Work and Note section for Apple News ([8c5cf8e](https://github.com/sparanoid/sparanoid.com/commit/8c5cf8e))
-* **post:** add cipher suites note for “Amazon S3 × CloudFront” ([78e1afd](https://github.com/sparanoid/sparanoid.com/commit/78e1afd))
-* **post:** add HTML version of “Chinese Copywriting Guidelines” ([0856a42](https://github.com/sparanoid/sparanoid.com/commit/0856a42))
-* **post:** add iTunes Store link ([04036a7](https://github.com/sparanoid/sparanoid.com/commit/04036a7))
-* **post:** add long-waiting “Public Key Pinning / HPKP Reporting” ([f797656](https://github.com/sparanoid/sparanoid.com/commit/f797656))
-* **post:** add more example for “DMARC” ([bc46e63](https://github.com/sparanoid/sparanoid.com/commit/bc46e63))
-* **post:** add new post “DMARC” ([776dfb4](https://github.com/sparanoid/sparanoid.com/commit/776dfb4))
-* **post:** add new post “HTTP/2 and ECDSA Cipher Suites” ([9959d9b](https://github.com/sparanoid/sparanoid.com/commit/9959d9b))
-* **post:** add new post “Slimpack” ([04cf4cf](https://github.com/sparanoid/sparanoid.com/commit/04cf4cf))
-* **post:** add updating SSL guide for “Amazon S3 × CloudFront” ([ba13ec5](https://github.com/sparanoid/sparanoid.com/commit/ba13ec5))
-* **post:** new post “CloudFront Cost Control” ([3d1d210](https://github.com/sparanoid/sparanoid.com/commit/3d1d210))
-* **post:** remove quotes ([4015be3](https://github.com/sparanoid/sparanoid.com/commit/4015be3))
-* **post:** update “Amazon S3 × CloudFront” ([5ffadf0](https://github.com/sparanoid/sparanoid.com/commit/5ffadf0))
-* **post:** update “OCSP Stapling and Nginx” ([02feb8d](https://github.com/sparanoid/sparanoid.com/commit/02feb8d))
-* **post:** update background for “Slimpack” ([6689032](https://github.com/sparanoid/sparanoid.com/commit/6689032))
-* **post:** update cache settings ([25e963a](https://github.com/sparanoid/sparanoid.com/commit/25e963a))
-* **post:** update CloudFront info for “Amazon S3 × CloudFront” ([945e962](https://github.com/sparanoid/sparanoid.com/commit/945e962))
-* **post:** update heading level for “Chinese Copywriting Guidelines” ([d028a8b](https://github.com/sparanoid/sparanoid.com/commit/d028a8b))
-* **post:** update screenshots for “Tianjin Project Revision” ([51e3f9c](https://github.com/sparanoid/sparanoid.com/commit/51e3f9c))
-* **post:** update URL for “DOLLARS Chat Room” ([0eaa5de](https://github.com/sparanoid/sparanoid.com/commit/0eaa5de))
-* **post:** use English version for “Chinese Copywriting Guidelines” ([bc34c04](https://github.com/sparanoid/sparanoid.com/commit/bc34c04))
-* **style:** minor tweak ([206c072](https://github.com/sparanoid/sparanoid.com/commit/206c072))
-* **style:** wider images for large screens ([ca5a60b](https://github.com/sparanoid/sparanoid.com/commit/ca5a60b))
-* **styles:** add missing variables ([a40a48a](https://github.com/sparanoid/sparanoid.com/commit/a40a48a))
-* **styles:** update font stack order ([1c22c58](https://github.com/sparanoid/sparanoid.com/commit/1c22c58))
-* **styles:** update text decoration ([b9e58bd](https://github.com/sparanoid/sparanoid.com/commit/b9e58bd))
-* **template:** update favicon ([d14da78](https://github.com/sparanoid/sparanoid.com/commit/d14da78))
+- Update jQuery to 3.5.1. [#2713](https://github.com/mmistakes/minimal-mistakes/pull/2713)
+- Add Indonesian localized UI text strings. [#2725](https://github.com/mmistakes/minimal-mistakes/pull/2725)
+- Update Vietnamese localized UI text strings. [#2722](https://github.com/mmistakes/minimal-mistakes/pull/2722)
+- Add Norwegian (Norsk) localized UI text strings. [#2702](https://github.com/mmistakes/minimal-mistakes/pull/2702)
+- Update allejo/jekyll-toc to v1.0.14 [#2700](https://github.com/mmistakes/minimal-mistakes/pull/2700)
 
-
-
-<a name="24.1.16"></a>
-## [24.1.16](https://github.com/sparanoid/sparanoid.com/compare/v24.1.15...v24.1.16) (2015-08-26)
-
+## [4.20.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.20.2)
 
 ### Bug Fixes
 
-* **post:** add quotes ([babc1ee](https://github.com/sparanoid/sparanoid.com/commit/babc1ee))
-* **post:** typo ([0329e39](https://github.com/sparanoid/sparanoid.com/commit/0329e39))
-* **post:** wrong format ([eb1510a](https://github.com/sparanoid/sparanoid.com/commit/eb1510a))
+- Fix broken link in documentation. [#2677](https://github.com/mmistakes/minimal-mistakes/issues/2677)
+- Fix typo in documentation. [#2678](https://github.com/mmistakes/minimal-mistakes/issues/2678)
+- Remove duplicate CSS definitions. [#2666](https://github.com/mmistakes/minimal-mistakes/pull/2666)
+- Fix `entries_layout: grid` in various layouts. [#2639](https://github.com/mmistakes/minimal-mistakes/issues/2639)
+- Change `fa` to `fas` for Font Awesome 5. [#2649](https://github.com/mmistakes/minimal-mistakes/pull/2649)
 
-### Features
+### Enhancements
 
-* **post:** better post layout ([89d4d58](https://github.com/sparanoid/sparanoid.com/commit/89d4d58))
-* **post:** new post “Apple Music Playlist” ([fab6f08](https://github.com/sparanoid/sparanoid.com/commit/fab6f08))
-* **posts:** add old posts ([ecdaddf](https://github.com/sparanoid/sparanoid.com/commit/ecdaddf))
-* **posts:** update language front-matter ([39724f5](https://github.com/sparanoid/sparanoid.com/commit/39724f5))
-* **style:** update custom styles ([7ed24c7](https://github.com/sparanoid/sparanoid.com/commit/7ed24c7))
-* **template:** add quotes for attributes ([47a2f7b](https://github.com/sparanoid/sparanoid.com/commit/47a2f7b))
+- Refactor page meta include. [#2641](https://github.com/mmistakes/minimal-mistakes/pull/2641)
+- Add `article:author` Open Graph markup. [#2670](https://github.com/mmistakes/minimal-mistakes/pull/2670)
 
-
-
-<a name="24.1.15"></a>
-## [24.1.15](https://github.com/sparanoid/sparanoid.com/compare/v24.1.14...v24.1.15) (2015-08-14)
-
+## [4.20.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.20.1)
 
 ### Bug Fixes
 
-* **grunt:** avoid duplicated jekyll watch ([00b11a7](https://github.com/sparanoid/sparanoid.com/commit/00b11a7))
-* **jekyll:** missing gist example due to recently Jekyll beta changes ([2989e23](https://github.com/sparanoid/sparanoid.com/commit/2989e23))
-* **post:** add quotes to CSS class for new Markdown parser ([d6d0c64](https://github.com/sparanoid/sparanoid.com/commit/d6d0c64))
-* **template:** missing quotes when parsing markdown ([52441ff](https://github.com/sparanoid/sparanoid.com/commit/52441ff))
-* **theme:** wrong theme slug for Curtana ([595432c](https://github.com/sparanoid/sparanoid.com/commit/595432c))
+- Fix `entries_layout: grid` in `home.html` layout. [#2616](https://github.com/mmistakes/minimal-mistakes/pull/2616)
 
-### Features
-
-* **basic:** theme support ([5939d5a](https://github.com/sparanoid/sparanoid.com/commit/5939d5a))
-* **grunt:** basic theme switching support ([0892675](https://github.com/sparanoid/sparanoid.com/commit/0892675))
-* **grunt:** better theme switch handling ([2a58c96](https://github.com/sparanoid/sparanoid.com/commit/2a58c96))
-* **grunt:** remove `grunt-html-validation` support ([ebd502d](https://github.com/sparanoid/sparanoid.com/commit/ebd502d))
-* **jekyll:** remove Gists support by default ([f88b013](https://github.com/sparanoid/sparanoid.com/commit/f88b013))
-* **jekyll:** tweak kramdown config ([4d3f033](https://github.com/sparanoid/sparanoid.com/commit/4d3f033))
-* **jekyll:** update jekyll, use default markdown and highlighter parser ([4320973](https://github.com/sparanoid/sparanoid.com/commit/4320973))
-* **style:** remove centered styles for sparanoid.com ([e71be8e](https://github.com/sparanoid/sparanoid.com/commit/e71be8e))
-* **template:** sync templates from AMSF ([1a42843](https://github.com/sparanoid/sparanoid.com/commit/1a42843))
-
-
-### BREAKING CHANGES
-
-* Jekyll removes this support by default, you need install `jekyll-gist` plugin to support Gists
-* Now that Kramdown and Rouge are used as markdown parser and syntax highlighter, please check if everything work as expected.
-
-
-<a name="0.0.33"></a>
-## [0.0.33](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.32...v0.0.33) (2015-08-14)
-
+## [4.20.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.20.0)
 
 ### Bug Fixes
 
-* **grunt:** ignore todos when updating AMSF ([749b0b3](https://github.com/sparanoid/almace-scaffolding/commit/749b0b3))
+- Add `relative_url` filter to author home link [#2575](https://github.com/mmistakes/minimal-mistakes/pull/2575)
+- Fix `analytics.provider` config comment to list all analytics providers. [#2607](https://github.com/mmistakes/minimal-mistakes/pull/2607)
+- Fix typo in installation documentation. [#2570](https://github.com/mmistakes/minimal-mistakes/pull/2570)
+- Fix broken Lunr search with Jekyll v4.1.0. [#2617](https://github.com/mmistakes/minimal-mistakes/pull/2617)
 
-### Features
+### Enhancements
 
-* **docs:** add info for core file updating ([db3d7a8](https://github.com/sparanoid/almace-scaffolding/commit/db3d7a8))
-* **grunt:** add basic AMSF self update support ([64c8fa8](https://github.com/sparanoid/almace-scaffolding/commit/64c8fa8))
-* **grunt:** check if AMSF already cloned in cache ([b00158e](https://github.com/sparanoid/almace-scaffolding/commit/b00158e))
-* **robots.txt:** remove useless define ([db01c80](https://github.com/sparanoid/almace-scaffolding/commit/db01c80))
+- Add an optional date alongside the reading time. To enable set `show_date: true` similar to how reading time is. [#2526](https://github.com/mmistakes/minimal-mistakes/pull/2526)
+- Remove hidden posts from posts.html layout. [#2625](https://github.com/mmistakes/minimal-mistakes/pull/2625)
+- Add entry layout configuration for `list` (default) or `grid` views on `layout: home`. [#2616](https://github.com/mmistakes/minimal-mistakes/pull/2616)
+- Add missing Chinese translations. [#2576](https://github.com/mmistakes/minimal-mistakes/pull/2576)
+- Improve Chinese translations. [#2626](https://github.com/mmistakes/minimal-mistakes/pull/2626)
+- Add `line-height` to `h4` element in notice helper. [#2602](https://github.com/mmistakes/minimal-mistakes/pull/2602)
+- Improve Algolia search. [#2572](https://github.com/mmistakes/minimal-mistakes/pull/2572)
+- Update link to wtfpl license in README. [#2571](https://github.com/mmistakes/minimal-mistakes/pull/2571)
+- Ignore teaser headline in table of contents when including posts list in another page. [#2558](https://github.com/mmistakes/minimal-mistakes/pull/2558)
+- Replace Font Awesome Kits with CSS from jsDelivr CDN. [#2583](https://github.com/mmistakes/minimal-mistakes/pull/2583)
+- Add `danmaku` option to Bilibili video provider and add corresponding documentation/ [#2599](https://github.com/mmistakes/minimal-mistakes/pull/2599)
+- Update documentation about loading l10n data file from the theme-gem. [#2621](https://github.com/mmistakes/minimal-mistakes/issues/2621) [#2624](https://github.com/mmistakes/minimal-mistakes/pull/2624)
 
+## [4.19.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.19.3)
 
-### BREAKING CHANGES
+### Enhancements
 
-* You can try `grunt amsf-update` to update AMSF automatically
+- Update GreedyNav.js to reduce masthead link overflow/shifting on mobile devices. [#2551](https://github.com/mmistakes/minimal-mistakes/issues/2551)
+- Replace `<section id="custom-comments"></section>` in `comments.html` include and add `custom_scripts.html` include for loading custom comment provider JavaScript in the footer. [#2549](https://github.com/mmistakes/minimal-mistakes/issues/2549)
+- Move page date Liquid to include. [#2544](https://github.com/mmistakes/minimal-mistakes/pull/2544)
+- Strip trailing whitespace in seo_description. [#2542](https://github.com/mmistakes/minimal-mistakes/pull/2542)
+- Improve sticky sidebar's appearance with short content. [#2514](https://github.com/mmistakes/minimal-mistakes/pull/2514)
 
+## [4.19.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.19.2)
 
-<a name="0.0.32"></a>
-## [0.0.32](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.31...v0.0.32) (2015-08-14)
+### Enhancements
 
-
-### Bug Fixes
-
-* **style:** missing footnotes styles for Kramdown ([cbd8d03](https://github.com/sparanoid/almace-scaffolding/commit/cbd8d03))
-
-### Features
-
-* **grunt:** add `theme-add` and `theme-update` support ([612ce72](https://github.com/sparanoid/almace-scaffolding/commit/612ce72))
-* **template:** add theme templates support ([50353d7](https://github.com/sparanoid/almace-scaffolding/commit/50353d7))
-* **theme:** better content margin ([6f75ecd](https://github.com/sparanoid/almace-scaffolding/commit/6f75ecd))
-
-
-### BREAKING CHANGES
-
-* Now you can include example page templates for your theme, simply put all example templates into `theme/pages/` and then you've done. All example templates will be available to end-users when they run AMSF in development mode.
-
-
-<a name="0.0.31"></a>
-## [0.0.31](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.30...v0.0.31) (2015-08-13)
-
-
-### Bug Fixes
-
-* **style:** add missing code block background for Rouge parser ([c38e1bf](https://github.com/sparanoid/almace-scaffolding/commit/c38e1bf))
-* **template:** heading padding fix ([470b508](https://github.com/sparanoid/almace-scaffolding/commit/470b508))
-* **template:** image titles not recognized in Safari Reader mode ([9de3d64](https://github.com/sparanoid/almace-scaffolding/commit/9de3d64))
-
-### Features
-
-* **docs:** update content and try new structure ([8d4f0f4](https://github.com/sparanoid/almace-scaffolding/commit/8d4f0f4))
-* **grunt:** remove availability task from sparanoid.com ([727c601](https://github.com/sparanoid/almace-scaffolding/commit/727c601))
-* **grunt:** use `grunt-assets-inline` as a replacement of `grunt-html-smoosher` ([841a59a](https://github.com/sparanoid/almace-scaffolding/commit/841a59a))
-* **template:** update homepage ([76775ef](https://github.com/sparanoid/almace-scaffolding/commit/76775ef))
-* **theme:** add theme basic info ([21fc0c3](https://github.com/sparanoid/almace-scaffolding/commit/21fc0c3))
-* **theme:** new syntax for inline assets ([70421fe](https://github.com/sparanoid/almace-scaffolding/commit/70421fe))
-* **theme:** use dedicated svg directory outside the jekyll `_includes` ([4962189](https://github.com/sparanoid/almace-scaffolding/commit/4962189))
-
-
-### BREAKING CHANGES
-
-* This will change the way SVG titles got embeded, now SVG titles are inlined into `<img>` tags instead of putting `<svg>` directly into HTML.
-
-
-<a name="0.0.30"></a>
-## [0.0.30](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.29...v0.0.30) (2015-08-11)
-
+- Add support for bilibili videos in [responsive video helper](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#responsive-video-embed). [#2512](https://github.com/mmistakes/minimal-mistakes/pull/2512)
+- Add Myanmar (Burmese) localized UI text strings. [#2500](https://github.com/mmistakes/minimal-mistakes/pull/2500)
+- Improve author links underline on hover. [#2472](https://github.com/mmistakes/minimal-mistakes/pull/2472)
+- Add documentation for applying Front Matter defaults to jekyll-archives pages. [#2466](https://github.com/mmistakes/minimal-mistakes/pull/2466)
+- Add missing Vietnamese translations. [#2459](https://github.com/mmistakes/minimal-mistakes/pull/2459) [#2486](https://github.com/mmistakes/minimal-mistakes/pull/2486)
+- Fix Finnish localized UI text strings. [#2455](https://github.com/mmistakes/minimal-mistakes/pull/2455)
+- Clarify documentation that Lunr only searches documents in collections. [#2450](https://github.com/mmistakes/minimal-mistakes/pull/2450)
+- Add guide on applying Front Matter defaults to jekyll-archives pages [#2466](https://github.com/mmistakes/minimal-mistakes/pull/2466)
 
 ### Bug Fixes
 
-* **grunt:** avoid executing other replace task ([22d130c](https://github.com/sparanoid/almace-scaffolding/commit/22d130c))
-* **grunt:** index version not bumped ([c9e9f8a](https://github.com/sparanoid/almace-scaffolding/commit/c9e9f8a))
+- Fix typo in configuration documentation. [#2497](https://github.com/mmistakes/minimal-mistakes/pull/2497)
+- Fix "Follow menu falls under post links" on small screens. [#2479](https://github.com/mmistakes/minimal-mistakes/issues/2479)
+- Hide index page from page-archive. [#2482](https://github.com/mmistakes/minimal-mistakes/pull/2482)
 
-### Features
+## [4.19.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.19.1)
 
-* **grunt:** try version auto bump for index ([3445afb](https://github.com/sparanoid/almace-scaffolding/commit/3445afb))
+### Enhancements
 
+- Add [Dracula](https://draculatheme.com/) Base16 syntax highlighting theme Sass variables to [stylesheets documentation](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#syntax-highlighting). [#2438](https://github.com/mmistakes/minimal-mistakes/pull/2438)
+- Update links to `HTTPS` and remove Google+ from configuration documentation. [#2432](https://github.com/mmistakes/minimal-mistakes/pull/2432)
+- Use `first_page_path` from jekyll-paginate-v2 if available. [#2431](https://github.com/mmistakes/minimal-mistakes/pull/2431)
+- Update onchange and uglify-js dependencies.
+- Update smooth-scroll.js to `v16.1.2`. [#2430](https://github.com/mmistakes/minimal-mistakes/issues/2430)
 
+### Bug Fixes
 
-<a name="0.0.29"></a>
-## [0.0.29](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.27...v0.0.29) (2015-08-11)
+- Fix author profile links `z-index` order on small screens. [#2440](https://github.com/mmistakes/minimal-mistakes/issues/2440)
 
+## [4.19.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.19.0)
 
-### Features
+### Enhancements
 
-* **grunt:** update `conventionalChangelog` ([39e8458](https://github.com/sparanoid/almace-scaffolding/commit/39e8458))
+- Add "click" overlay to close masthead and follow button menus when open. [#1168](https://github.com/mmistakes/minimal-mistakes/issues/1168)
+- Remove deprecated Staticman v1 configurations from `_config.yml`. [#2386](https://github.com/mmistakes/minimal-mistakes/issues/2386)
+- Use `relative_url` and `absolute_url` filters where possible. [#2387](https://github.com/mmistakes/minimal-mistakes/pull/2387)
+- Improve headline hierarchy and add Sass specific variables `$h-size-x`. [#2423](https://github.com/mmistakes/minimal-mistakes/issues/2423)
+- Improve accessibility of `default` skin by increasing color contrast of text and links.
+- Hide posts with `hidden: true` YAML front matter from appearing in listings. [#2345](https://github.com/mmistakes/minimal-mistakes/pull/2345)
+- Add Irish (Gaeilge) localized UI text strings. [#2422](https://github.com/mmistakes/minimal-mistakes/pull/2422)
+- Remove `box-shadow` on radio and checkbox inputs. [#2398](https://github.com/mmistakes/minimal-mistakes/pull/2398)
+- Bump Jekyll gem dependency to `v3.7`.
 
+### Bug Fixes
 
+- Fix documentation around using `bundle info` command. [#2425](https://github.com/mmistakes/minimal-mistakes/pull/2425)
+- Fix rake vulnerability in `.gemspec` file.
+- Fix Staticman v2 comment submission. [#2402](https://github.com/mmistakes/minimal-mistakes/pull/2402)
+- Fix repeated site base path for masthead logo. [#2385](https://github.com/mmistakes/minimal-mistakes/pull/2385)
 
-<a name"0.0.28"></a>
-### 0.0.28 (aka. 24.1.14) (2015-08-02)
+## [4.18.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.18.1)
 
-This is a special tag release merged from sparanoid.com with the same commit history.
+### Bug Fixes
 
-<a name"24.1.14"></a>
-### 24.1.14 (2015-08-02)
+- Fix compatibility issue with jekyll-paginate-v2. [#2381](https://github.com/mmistakes/minimal-mistakes/pull/2381)
 
-Note: the following changelog are inherited from [sparanoid/sparanoid.com](https://github.com/sparanoid/sparanoid.com).
+## [4.18.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.18.0)
 
-#### Bug Fixes
+### Enhancements
 
-* use more common fonts path ([c989bc49](https://github.com/sparanoid/sparanoid.com/commit/c989bc49))
-* **grunt:**
-  * missing base URL, new `grunt-html-smoosher` config ([bb02d899](https://github.com/sparanoid/sparanoid.com/commit/bb02d899))
-  * fix previous commit ([430f0a58](https://github.com/sparanoid/sparanoid.com/commit/430f0a58))
-  * css not minified if `config.cfg.base` defined ([6515c46d](https://github.com/sparanoid/sparanoid.com/commit/6515c46d))
+- Allow `home` layout to display posts without pagination. [#2378](https://github.com/mmistakes/minimal-mistakes/pull/2378)
+- Add links to high resolution skin screenshots in README. [#2363](https://github.com/mmistakes/minimal-mistakes/issues/2363)
+- Update README and LICENSE. [#2367](https://github.com/mmistakes/minimal-mistakes/pull/2367)
+- Update `.gitignore` file. [#2366](https://github.com/mmistakes/minimal-mistakes/pull/2366)
+- Allow override of page excerpt in hero header via `tagline` YAML front matter. [#2307](https://github.com/mmistakes/minimal-mistakes/pull/2307)
+- Exclude `package-lock.json` from Jekyll build. [#2364](https://github.com/mmistakes/minimal-mistakes/pull/2364)
+- Use `%-d` instead of `%d` so displayed dates aren't padded with zero. [#2359](https://github.com/mmistakes/minimal-mistakes/pull/2359)
+- Update table of contents helper (`toc.html`) to [v1.0.8](https://github.com/allejo/jekyll-toc/releases). [#2355](https://github.com/mmistakes/minimal-mistakes/pull/2355)
+- Add missing Dutch localized UI text strings. [#2321](https://github.com/mmistakes/minimal-mistakes/pull/2321)
+- Support page header (hero) in `archive-taxonomy` layout. [#2320](https://github.com/mmistakes/minimal-mistakes/pull/2320)
+- Add social icon color for Keybase. [#2302](https://github.com/mmistakes/minimal-mistakes/pull/2302)
 
+### Bug Fixes
 
-#### Features
+- Fix JavaScript comments in Disqus include to be compatible with `compress` layout. [#2373](https://github.com/mmistakes/minimal-mistakes/pull/2373)
+- Fix wrong newline concatenation in SEO description [#2368](https://github.com/mmistakes/minimal-mistakes/pull/2368) [#2354](https://github.com/mmistakes/minimal-mistakes/issues/2354)
+- Fix Staticman v2/v3 conditional for showing comments. [#2351](https://github.com/mmistakes/minimal-mistakes/pull/2351)
+- Fix masthead logo path. [#2332](https://github.com/mmistakes/minimal-mistakes/pull/2332)
+- Fix schema.org dates to ISO-8601. [#2339](https://github.com/mmistakes/minimal-mistakes/pull/2339)
+- Fix background color of code blocks in notices. [#2328](https://github.com/mmistakes/minimal-mistakes/pull/2328)
+- Fix alignment of feature rows when placed next to a sticky sidebar. [#2327](https://github.com/mmistakes/minimal-mistakes/issues/2327)
+- Fix `seo_description` in `_includes/seo.html`. [#2326](https://github.com/mmistakes/minimal-mistakes/pull/2326)
+- Fix typo in `_config.yml`. [#2319](https://github.com/mmistakes/minimal-mistakes/pull/2319)
 
-* **grunt:**
-  * use `grunt-bump` instead of `grunt-release` ([87597f8e](https://github.com/sparanoid/sparanoid.com/commit/87597f8e))
-  * simplify grunt buid task ([85a9d0ac](https://github.com/sparanoid/sparanoid.com/commit/85a9d0ac))
-  * remove banner timestamp ([bc20e74e](https://github.com/sparanoid/sparanoid.com/commit/bc20e74e))
-* **template:** add main content class support ([05335815](https://github.com/sparanoid/sparanoid.com/commit/05335815))
+## [4.17.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.17.2)
 
+### Enhancements
 
-<a name"24.1.13"></a>
-### 24.1.13 (2015-07-20)
+- Add collection step to documentation about creating a portfolio page. [#2294](https://github.com/mmistakes/minimal-mistakes/pull/2294)
+- Replace sticky footer JavaScript with flexbox styles. [#2289](https://github.com/mmistakes/minimal-mistakes/pull/2289)
 
+### Bug Fixes
 
-#### Bug Fixes
+- Fix sticky footer when using MozBar extension. [#2281](https://github.com/mmistakes/minimal-mistakes/issues/2281)
 
-* **grunt:** wrong scripts and styles URL when `site.base` is defined ([bb1e5fde](https://github.com/sparanoid/sparanoid.com/commit/bb1e5fde))
-* **post:** dead external link ([a80744bc](https://github.com/sparanoid/sparanoid.com/commit/a80744bc))
+## [4.17.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.17.1)
 
+### Enhancements
 
-#### Features
+- Update Chinese (Simplified) localized UI text strings. [#2286](https://github.com/mmistakes/minimal-mistakes/pull/2286)
+- Update list of 3rd party JavaScript used and licenses. [#2276](https://github.com/mmistakes/minimal-mistakes/pull/2276)
 
-* **grunt:**
-  * tasks minor tweak ([e070f369](https://github.com/sparanoid/sparanoid.com/commit/e070f369))
-  * simplify banner ([7b5b9b38](https://github.com/sparanoid/sparanoid.com/commit/7b5b9b38))
-* **post:**
-  * proofreading for post “Amazon S3 × CloudFront” ([5afd26dd](https://github.com/sparanoid/sparanoid.com/commit/5afd26dd))
-  * new post “Markdown Features Test” ([4a393f70](https://github.com/sparanoid/sparanoid.com/commit/4a393f70))
-  * new post “Markdown Features Test” ([6759ddd3](https://github.com/sparanoid/sparanoid.com/commit/6759ddd3))
-* **style:** monospace fonts look bigger than normal fonts, so make it smaller ([5ef4fb87](https://github.com/sparanoid/sparanoid.com/commit/5ef4fb87))
-* **template:**
-  * use custom `grunt-html-smoosher` ([94a87c95](https://github.com/sparanoid/sparanoid.com/commit/94a87c95))
-  * strip unwanted whitespaces ([0ce08c0a](https://github.com/sparanoid/sparanoid.com/commit/0ce08c0a))
+### Bug Fixes
 
+- Fix indention of nested GFM task lists. [#2283](https://github.com/mmistakes/minimal-mistakes/issues/2283)
 
-#### Breaking Changes
+## [4.17.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.17.0)
 
-* Now `grunt-html-smoosher` only inline files with specific data attribute.
+### Enhancements
 
- ([94a87c95](https://github.com/sparanoid/sparanoid.com/commit/94a87c95))
+- Show a permalink anchor when hovering over headings in main content area. [#2251](https://github.com/mmistakes/minimal-mistakes/pull/2251)
+- Allow per-page override of `words_per_minute`. [#2250](https://github.com/mmistakes/minimal-mistakes/pull/2250)
+- Update [onchange](https://www.npmjs.com/package/onchange) development dependency in `package.json`. [#2241](https://github.com/mmistakes/minimal-mistakes/issues/2241)
+- Add Catalan localized UI text strings. [#2237](https://github.com/mmistakes/minimal-mistakes/pull/2237)
 
+### Bug Fixes
 
-<a name"24.1.12"></a>
-### 24.1.12 (2015-04-30)
+- Remove extraneous space from Internet Explorer conditional statement. [#2273](https://github.com/mmistakes/minimal-mistakes/pull/2273)
+- Fix typo in `_config.yml`. [#2243](https://github.com/mmistakes/minimal-mistakes/pull/2243)
+- Replace `http` URLs with `https` where applicable in `_config.yml`. [#2244](https://github.com/mmistakes/minimal-mistakes/pull/2244)
 
+## [4.16.6](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.6)
 
-#### Bug Fixes
+### Enhancements
 
-* **grunt:** `copy:serve` not copying scripts in subdirectories ([ccba58e9](https://github.com/sparanoid/sparanoid.com/commit/ccba58e9))
-* **style:** better code appearance ([c6e0f5c2](https://github.com/sparanoid/sparanoid.com/commit/c6e0f5c2))
-* **travis:** build error ([b1a9a0af](https://github.com/sparanoid/sparanoid.com/commit/b1a9a0af))
+- Relax Jekyll dependency to allow for version 4.0.
+- Add missing Spanish localized UI text strings. [#2229](https://github.com/mmistakes/minimal-mistakes/pull/2229)
+- Allow Markdown in author bio. [#2215](https://github.com/mmistakes/minimal-mistakes/pull/2215)
 
+### Bug Fixes
 
-#### Features
+- Fix `site.url` in Organization/Person JSON-LD schema. [#1906](https://github.com/mmistakes/minimal-mistakes/issues/1906)
+- Remove full stop in some `comment_form_info` UI text strings. [#2220](https://github.com/mmistakes/minimal-mistakes/pull/2220)
+- Fix default `site.author` in seo.html [#2230](https://github.com/mmistakes/minimal-mistakes/pull/2230)
+- Fix overlapping links (linked to and post's permalink) in post link type. [#2222](https://github.com/mmistakes/minimal-mistakes/issues/2222)
 
-* **post:** new article “Amazon S3 × CloudFront” ([347624c9](https://github.com/sparanoid/sparanoid.com/commit/347624c9))
-* **style:**
-  * disable WebKit hyphens, it sucks ([f119ccc1](https://github.com/sparanoid/sparanoid.com/commit/f119ccc1))
-  * refine font size ([7b345668](https://github.com/sparanoid/sparanoid.com/commit/7b345668))
-* **template:**
-  * update remote server deployment ([6b31c70b](https://github.com/sparanoid/sparanoid.com/commit/6b31c70b))
-  * add canonical link support ([84ab1e8d](https://github.com/sparanoid/sparanoid.com/commit/84ab1e8d))
-  * better template structures ([c3191b36](https://github.com/sparanoid/sparanoid.com/commit/c3191b36))
-  * `twitter-cards` is now `open-graph` ([e3edcff5](https://github.com/sparanoid/sparanoid.com/commit/e3edcff5))
+## [4.16.5](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.5)
 
+### Enhancements
 
-#### Breaking Changes
+- Add optional site subtitle to masthead. [#2173](https://github.com/mmistakes/minimal-mistakes/issues/2173)
+- Add missing Punjabi and Hindi localized UI text strings. [#2212](https://github.com/mmistakes/minimal-mistakes/pull/2212)
+- Add missing Korean localized UI text strings. [#2209](https://github.com/mmistakes/minimal-mistakes/pull/2209)
+- Use [Font Awesome Kits](https://blog.fontawesome.com/introducing-font-awesome-kits-7134d1d59959) to use the latest version of icons. [#2184](https://github.com/mmistakes/minimal-mistakes/issues/2184)
+- Remove unnecessary console.log in `lunr-en.js` and `lunr-gr.js` JavaScript. [#2193](https://github.com/mmistakes/minimal-mistakes/issues/2193)
+- Remove unnecessary `type="text/javascript"` from Google Analytics JavaScript. [#2190](https://github.com/mmistakes/minimal-mistakes/pull/2190)
+- Update links and fix typos in documentation. [#2186](https://github.com/mmistakes/minimal-mistakes/pull/2186)
+- Add skip links. [#2182](https://github.com/mmistakes/minimal-mistakes/issues/2182)
 
-* This release changes the way you push compiled files to remote servers. Now I changed my server from Linode VPS to Amazon S3 and CloudFront, I also changed my feed URL from /feed/ to /feed.xml since Amazon S3 doesn't support multiple Document Index. You can read more information from my [blog post](https://sparanoid.com/note/amazon-s3-cloudfront/).
+### Bug Fixes
 
- ([6b31c70b](https://github.com/sparanoid/sparanoid.com/commit/6b31c70b))
-* Major template update, you should update all your template files if you need further updates.
+- Fix aria issues with Lunr search form. [#2211](https://github.com/mmistakes/minimal-mistakes/pull/2211)
+- Fix missing fallback title for table of contents.
 
- ([c3191b36](https://github.com/sparanoid/sparanoid.com/commit/c3191b36))
+## [4.16.4](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.4)
 
+### Enhancements
 
-<a name"24.1.11"></a>
-### 24.1.11 (2015-04-21)
+- Update Brazilian Portuguese localized UI text strings. [#2162](https://github.com/mmistakes/minimal-mistakes/pull/2162)
+- Update Font Awesome to v5.8.2. [#2150](https://github.com/mmistakes/minimal-mistakes/pull/2150)
+- Add missing Spanish localized UI text strings. [#2149](https://github.com/mmistakes/minimal-mistakes/pull/2149)
 
+### Bug Fixes
 
-#### Bug Fixes
+- Fix arithmetic in `_form.scss` partial. [#2169](https://github.com/mmistakes/minimal-mistakes/pull/2169)
+- Fix pound symbol not displaying properly for post categories and tags. [#2156](https://github.com/mmistakes/minimal-mistakes/issues/2156)
+- Fix permalink stacking order and click-able area in archives.
 
-* **style:** remove unwanted margin for last-child ([68d288c0](https://github.com/sparanoid/sparanoid.com/commit/68d288c0))
+## [4.16.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.3)
 
+### Enhancements
 
-#### Features
+- Update jQuery to v3.4.1. [#2137](https://github.com/mmistakes/minimal-mistakes/issues/2137)
+- Update Gumshoe to v5.1.1. [#2140](https://github.com/mmistakes/minimal-mistakes/issues/2140)
 
-* **post:** new post “iTunes Artwork Grabber” ([6e562a32](https://github.com/sparanoid/sparanoid.com/commit/6e562a32))
-* **template:** add custom head and foot hooks ([1ee7d566](https://github.com/sparanoid/sparanoid.com/commit/1ee7d566))
-* **work:** update categories ([445de41c](https://github.com/sparanoid/sparanoid.com/commit/445de41c))
+### Bug Fixes
 
+- Fix JavaScript error when resizing pages with table of contents. [#2140](https://github.com/mmistakes/minimal-mistakes/issues/2140)
 
-#### Breaking Changes
+## [4.16.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.2)
 
-* Now you can insert custom code snippets into `<head>` and `<footer>` per post. Just simply use the following syntax in post front-matter:
+### Bug Fixes
 
-```
-head: |
-  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/pjdeblccplohlgedbefopohaedodcgci">
-```
+- Revert jQuery back to version v3.3.1, v.3.4.0 causes issues with other plugins that haven't been updated. [#2137](https://github.com/mmistakes/minimal-mistakes/issues/2137)
 
-or:
+## [4.16.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.1)
 
-```
-foot: |
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Base64/0.3.0/base64.min.js"></script>
-```
+### Enhancements
 
- ([1ee7d566](https://github.com/sparanoid/sparanoid.com/commit/1ee7d566))
+- Update [`compress` layout](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#compress-layout) to v3.1.0. [#2128](https://github.com/mmistakes/minimal-mistakes/pull/2128)
+- Update jQuery to v3.4.0. [#2129](https://github.com/mmistakes/minimal-mistakes/pull/2129)
 
+### Bug Fixes
 
-<a name"24.1.10"></a>
-### 24.1.10 (2015-04-20)
+- Fix Gumshoe related JavaScript error on pages without a table of contents. [#2124](https://github.com/mmistakes/minimal-mistakes/pull/2124)
 
+## [4.16.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.16.0)
 
-#### Bug Fixes
+### Enhancements
 
-* **grunt:** not detecting newly added files ([f386d870](https://github.com/sparanoid/sparanoid.com/commit/f386d870))
-* **package:** missing `grunt-html-smoosher` ([c54b001a](https://github.com/sparanoid/sparanoid.com/commit/c54b001a))
-* **template:** better Twitter Cards author support ([56f089c3](https://github.com/sparanoid/sparanoid.com/commit/56f089c3))
+- Improve search `input` semantics for Lunr and Google search providers. [#2123](https://github.com/mmistakes/minimal-mistakes/pull/2123)
+- Allow adding JavaScript files after those bundled in the theme. [#2110](https://github.com/mmistakes/minimal-mistakes/issues/2110) [#2116](https://github.com/mmistakes/minimal-mistakes/pull/2116)
+- Add `$max-width` Sass variable for adjusting page content's maximum width. [#2093](https://github.com/mmistakes/minimal-mistakes/pull/2093)
+- Add Thai localized UI text strings. [#2111](https://github.com/mmistakes/minimal-mistakes/pull/2111)
+- Update Font Awesome to [v5.8.1](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.8.1). [#2102](https://github.com/mmistakes/minimal-mistakes/pull/2102)
+- Add missing Vietnamese localized UI text strings. [#2097](https://github.com/mmistakes/minimal-mistakes/pull/2097)
+- Replace jQuery Smooth Scroll with Smooth Scroll + Gumshoe. [#2082](https://github.com/mmistakes/minimal-mistakes/pull/2082)
+- Add styling for [GFM task lists](https://help.github.com/en/articles/about-task-lists#creating-task-lists). [#2092](https://github.com/mmistakes/minimal-mistakes/issues/2092)
+- Update Google Universal Analytics to load async. [#2079](https://github.com/mmistakes/minimal-mistakes/pull/2079)
+- Remove Google+ social sharing button, comment provider, and author link configs from theme.
+- Add missing Chinese text strings. [#2072](https://github.com/mmistakes/minimal-mistakes/pull/2072)
 
+### Bug Fixes
 
-#### Features
+- Fix table of contents active link styling.
+- Add missing Hindi localized UI text strings. [#2105](https://github.com/mmistakes/minimal-mistakes/pull/2105) [#2106](https://github.com/mmistakes/minimal-mistakes/pull/2106)
+- Fix Brazilian Portuguese text strings. [#2098](https://github.com/mmistakes/minimal-mistakes/pull/2098)
+- Fix typo in French `results_found` text string. [#2096](https://github.com/mmistakes/minimal-mistakes/pull/2096)
+- Fix figures inside of list elements. [#2094](https://github.com/mmistakes/minimal-mistakes/pull/2094)
+- Remove Font Awesome `data-search-pseudo-elements` attribute as it degrades smooth scroll performance. [#2075](https://github.com/mmistakes/minimal-mistakes/issues/2075#issuecomment-472437014)
+- Fix footnote links incompatibility with smooth scroll plugin. [#2075](https://github.com/mmistakes/minimal-mistakes/issues/2075)
+- Loosen Bundler dependency in ruby gem.
 
-* **build:**
-  * try `grunt-release` task ([7ddb2f2d](https://github.com/sparanoid/sparanoid.com/commit/7ddb2f2d))
-  * update Travis ([95910f0e](https://github.com/sparanoid/sparanoid.com/commit/95910f0e))
-* **grunt:** speed up serve task by passing JS files directly from `copy` ([0165c8db](https://github.com/sparanoid/sparanoid.com/commit/0165c8db))
-* **style:** custom inlined-style list ([aae14607](https://github.com/sparanoid/sparanoid.com/commit/aae14607))
+## [4.15.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.15.2)
 
+### Enhancements
 
-<a name="24.1.9"></a>
-### 24.1.9 (2015-03-06)
+- Close search overlay with <kbd>Esc</kbd>. [#2055](https://github.com/mmistakes/minimal-mistakes/pull/2055)
+- Update Swedish localized UI text strings. [#2056](https://github.com/mmistakes/minimal-mistakes/pull/2056)
+- Update Font Awesome to 5.7.1 and add `data-search-pseudo-elements` attribute. [#2053](https://github.com/mmistakes/minimal-mistakes/pull/2053)
+- Add Malayalam localized UI text strings. [#2037](https://github.com/mmistakes/minimal-mistakes/pull/2037)
 
+### Bug Fixes
 
-#### Bug Fixes
+- Fix table of contents errors with non-English characters in the headings. [#2042](https://github.com/mmistakes/minimal-mistakes/pull/2042)
+- Fix `site.logo` false positives. [#2026](https://github.com/mmistakes/minimal-mistakes/pull/2026#issuecomment-455770730)
+- Add empty `alt` attribute to `site.logo` image. [#2035](https://github.com/mmistakes/minimal-mistakes/pull/2035)
 
-* **grunt:** cached Jekyll metadata not purged ([44965f9a](https://github.com/sparanoid/sparanoid.com/commit/44965f9ad20ccda44e3c2f6f968537a311dcaf17))
+## [4.15.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.15.1)
 
+### Bug Fixes
 
-<a name="24.1.8"></a>
-### 24.1.8 (2015-03-06)
+- Fix empty `<img>` when `site_logo` is not assigned. [#2026](https://github.com/mmistakes/minimal-mistakes/pull/2026#issuecomment-454809876)
 
+## [4.15.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.15.0)
 
-#### Bug Fixes
+### Enhancements
 
-* **style:**
-  * wrong .external media query directive ([cf9d5fa1](https://github.com/sparanoid/sparanoid.com/commit/cf9d5fa15d0c139721bdc722d641d2c2e65d553e))
-  * wrong GitHub Gist font size ([0544eafc](https://github.com/sparanoid/sparanoid.com/commit/0544eafca92360464589036c8fb60e2cd85f6816))
+- Add logo and title customization to the masthead. [#2026](https://github.com/mmistakes/minimal-mistakes/pull/2026)
+- Add support to customize `issue-term` for utterances comment provider. [#2022](https://github.com/mmistakes/minimal-mistakes/pull/2022)
+- Allow custom canonical url on a page-by-page basis. [#2021](https://github.com/mmistakes/minimal-mistakes/pull/2021)
+- Update table of contents navigation based on scroll position to indicate which link is currently active in the viewport. [#2020](https://github.com/mmistakes/minimal-mistakes/pull/2020)
+- Clicking table of contents links changes URL has fragment. [#2019](https://github.com/mmistakes/minimal-mistakes/pull/2019) [#2023](https://github.com/mmistakes/minimal-mistakes/pull/2023)
 
+## [4.14.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.14.2)
 
-#### Features
+### Enhancements
 
-* **config:** update assets URL, CloudFront should be better ([acb54e77](https://github.com/sparanoid/sparanoid.com/commit/acb54e773904507f328dc8a0b406d0d1917efe59))
-* **jekyll:** use latest 3.0.0.beta2 ([603069ea](https://github.com/sparanoid/sparanoid.com/commit/603069ea9b6709f5801bd40da713bad55ecc86ce))
-* **post:**
-  * add new screenshots for “Delicious” ([791566c8](https://github.com/sparanoid/sparanoid.com/commit/791566c805ab7b7fbcfb7d1a77e398cf0c371aa1))
-  * new post “Shutdown Like a Boss” ([df164f6c](https://github.com/sparanoid/sparanoid.com/commit/df164f6cb19c46c1527467fde6bd56e31bfe5b02))
-  * use markdown for pages ([59bfcb89](https://github.com/sparanoid/sparanoid.com/commit/59bfcb891815cb0179bd4e95aed633617d0cb28a))
-* **style:** update media queries position ([826c4966](https://github.com/sparanoid/sparanoid.com/commit/826c4966dbdc6c1e4b2ba015ce0b752b15d8d248))
-* **template:** update post date format ([46cf345f](https://github.com/sparanoid/sparanoid.com/commit/46cf345fc779753d89fd55ee097f9e6f92d0cf17))
+- Improve accessibility by adding label text to search button toggle. [#2014](https://github.com/mmistakes/minimal-mistakes/pull/2014)
+- Update Lunr to 2.3.5. [#2010](https://github.com/mmistakes/minimal-mistakes/pull/2010)
+- Shorten Internet Explorer conditional statement in `_includes/head.html`. [#2006](https://github.com/mmistakes/minimal-mistakes/pull/2006)
+- Add Persian localized UI text strings. [#2004](https://github.com/mmistakes/minimal-mistakes/pull/2004)
+- Remove unused JavaScript variables from Staticman comment script. [#1996](https://github.com/mmistakes/minimal-mistakes/pull/1996)
+- Update Font Awesome to 5.6.0. [#1995](https://github.com/mmistakes/minimal-mistakes/pull/1995)
+- Change remaining schema.org markup to `https`. [#1978](https://github.com/mmistakes/minimal-mistakes/pull/1978)
+- Update NPM dependencies.
 
+### Bug Fixes
 
-<a name="24.1.7"></a>
-### 24.1.7 (2014-12-14)
+- Fix wide tables that overflow parent container. [#2008](https://github.com/mmistakes/minimal-mistakes/issues/2008)
+- Fix Spanish `comments_label` and `comments_title` UI text strings. [#1997](https://github.com/mmistakes/minimal-mistakes/pull/1997)
+- Allow sidebar navigation with custom sidebar content. [#1986](https://github.com/mmistakes/minimal-mistakes/issues/1986)
+- Fix Google Custom Search JavaScript error when not using Instant Search. [#1983](https://github.com/mmistakes/minimal-mistakes/pull/1983)
 
+## [4.14.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.14.1)
 
-#### Bug Fixes
+### Bug Fixes
 
-* watch files in subdirectories for grunt tasks ([2234f54b](https://github.com/sparanoid/sparanoid.com/commit/2234f54b0242637eacfb6ce5e9658a382e3b6d44))
-* **post:** typo in “Chinese Copywriting Guidelines” ([4f24b6ba](https://github.com/sparanoid/sparanoid.com/commit/4f24b6ba35aeea1eb9c9203ad08d0a7d5b80b25e))
-* **style:** update cite position for sparanoid.com ([26ef8c08](https://github.com/sparanoid/sparanoid.com/commit/26ef8c084d0b11f5d558ac14111ad985a2885b1e))
-* **test:** lesslint error ([fb341f60](https://github.com/sparanoid/sparanoid.com/commit/fb341f609fef4f332336cf191a15a4ce01af7a87))
+- Fix closed navicon on hover.
 
+## [4.14.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.14.0)
 
-#### Features
+### Enhancements
 
-* reset `site.base` for local development ([cd46627b](https://github.com/sparanoid/sparanoid.com/commit/cd46627bae8d6f69b84cabb152bf559de6cf6e6e))
-* **feed:** use `<small>` for external link ([69c0abc9](https://github.com/sparanoid/sparanoid.com/commit/69c0abc9ecd5f34208d3458ad99e1b8ec12840b8))
-* **grunt:**
-  * add multiple Less output support ([568041ec](https://github.com/sparanoid/sparanoid.com/commit/568041ec95070c2e17b198661a0e2e685c96daf4))
-  * new grunt option `--fast`, build site without minification ([073fed50](https://github.com/sparanoid/sparanoid.com/commit/073fed50ccf531b6af7669bcf038229c8849ba1b))
-* **post:** update post “Chinese Copywriting Guidelines” ([3b021f32](https://github.com/sparanoid/sparanoid.com/commit/3b021f3233518038d0d20808a239989b06a3510d))
-* **template:**
-  * modern page titles ([a1dedc01](https://github.com/sparanoid/sparanoid.com/commit/a1dedc01e5030302c31cf4e0a2c0f2819e6bdfb8))
-  * update email subscription template ([af2795d7](https://github.com/sparanoid/sparanoid.com/commit/af2795d736278cec89e6ace87e69ef2fa068fd01))
-  * move pages into `_pages` ([6d705c27](https://github.com/sparanoid/sparanoid.com/commit/6d705c274377c4b2f31f4438a74caf6a00f9f083))
+- Change schema.org markup to `https`. [#1969](https://github.com/mmistakes/minimal-mistakes/pull/1969)
+- Add Google Drive as video provider. [#1967](https://github.com/mmistakes/minimal-mistakes/pull/1967)
+- Match `:focus` color to skin.
+- Add support for [utterances](https://utteranc.es/) comments. [#1909](https://github.com/mmistakes/minimal-mistakes/issues/1909)
+- Use privacy aware embed options for YouTube and Vimeo in [responsive video helper](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#responsive-video-embed). [#1964](https://github.com/mmistakes/minimal-mistakes/pull/1964)
+- Add `rel="nofollow noopener noreferrer"` to author profile links. [#1924](https://github.com/mmistakes/minimal-mistakes/pull/1924)
+- Improve color contrast of primary buttons and links.
+- Add Punjabi localized UI text strings. [#1962](https://github.com/mmistakes/minimal-mistakes/pull/1962)
+- Add Hindi localized UI text strings. [#1888](https://github.com/mmistakes/minimal-mistakes/pull/1888)
+- Update Lunr to `2.3.3`. [#1885](https://github.com/mmistakes/minimal-mistakes/pull/1885)
+- Cache "static" includes to improve build performance. **Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build. [#1874](https://github.com/mmistakes/minimal-mistakes/pull/1874)
+- Make entire feature and archive items "clickable". [#1864](https://github.com/mmistakes/minimal-mistakes/pull/1864)
+- Allow custom Staticman endpoints. [#1842](https://github.com/mmistakes/minimal-mistakes/issues/1842)
+- Remove `type="text/css"` from Algolia script includes. [#1836](https://github.com/mmistakes/minimal-mistakes/pull/1836)
+- Remove unneeded `HandheldFriendly` and `MobileOptimized` meta tags. [#1837](https://github.com/mmistakes/minimal-mistakes/pull/1837)
+- Update Font Awesome to version `5.5.0` and add `integrity` hash. [#1922](https://github.com/mmistakes/minimal-mistakes/pull/1922)
+- Always load Google 404 Linkhelp script over HTTPS. [#1829](https://github.com/mmistakes/minimal-mistakes/pull/1829)
+- Remove deprecated `base_path` include helper.
 
+### Bug Fixes
 
-#### Breaking Changes
+- Prevent current post from showing in the related posts section. [#1976](https://github.com/mmistakes/minimal-mistakes/pull/1976)
+- Fix dark skins syntax highlighting colors. [#1973](https://github.com/mmistakes/minimal-mistakes/issues/1973)
+- Remove unnecessary closing bracket in analytics documentation. [#1915](https://github.com/mmistakes/minimal-mistakes/pull/1915)
+- Fix breadcrumb navigation alignment. [#1917](https://github.com/mmistakes/minimal-mistakes/issues/1917)
+- Fix Algolia search link positioning. [#1904](https://github.com/mmistakes/minimal-mistakes/pull/1904)
+- Fix Lunr search index merging words. [#1883](https://github.com/mmistakes/minimal-mistakes/issues/1883)
+- Properly apply `relative_url` filter to internal links in header overlay `actions` array.
+- Revert cached includes (`include_cached`) for comment and analytics providers. [#1905](https://github.com/mmistakes/minimal-mistakes/issues/1905)
 
-* All pages are moved into `_pages` for better file structure management
- ([6d705c27](https://github.com/sparanoid/sparanoid.com/commit/6d705c274377c4b2f31f4438a74caf6a00f9f083))
+## [4.13.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.13.0)
 
+### Enhancements
 
-<a name="24.1.6"></a>
-### 24.1.6 (2014-12-01)
+- Add Romanian localized UI text strings. [#1814](https://github.com/mmistakes/minimal-mistakes/pull/1814)
+- Improve author link flexibility. [#1581](https://github.com/mmistakes/minimal-mistakes/issues/1581)
+- Improve footer link flexibility.
+- Deprecate `cta_label` and `cta_url` in header overlay in favor of new `actions` array that allows for multiple "call to action" button links. [#1461](https://github.com/mmistakes/minimal-mistakes/issues/1461)
+- Add support to [gallery helper](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery) for defining column layout (`half`, `third`, or single `''`). [#1821](https://github.com/mmistakes/minimal-mistakes/issues/1821)
 
+### Bug Fixes
 
-#### Bug Fixes
+- Fix sidebar navigation list toggle. [#1819](https://github.com/mmistakes/minimal-mistakes/issues/1819)
+- Fix hover animation for links with `:visited` state. [#1820](https://github.com/mmistakes/minimal-mistakes/issues/1820)
 
-* sync init config file ([b22cfaf3](https://github.com/sparanoid/sparanoid.com/commit/b22cfaf3c53be25d95f342a8f52ac2b9107b5bfc))
-* remove unnecessary task ([0fd0dc23](https://github.com/sparanoid/sparanoid.com/commit/0fd0dc235c4247976845a02fe8b2064a3a06b4aa))
-* **grunt:** now also watches Jekyll configuration files ([cf63e34e](https://github.com/sparanoid/sparanoid.com/commit/cf63e34ef44cb65af3413b36155ec9367cf18818))
-* **sitemap:** duplicated URL definitions ([5ee82675](https://github.com/sparanoid/sparanoid.com/commit/5ee82675f2d05bfc5e48e047d584da611f13b1ca))
-* **style:**
-  * `pre` and `code` not aligned properly ([dffc75b0](https://github.com/sparanoid/sparanoid.com/commit/dffc75b07501c54f2c4f5a79183e78a7196753f4))
-  * table align overrides by default user agent styles ([45ded474](https://github.com/sparanoid/sparanoid.com/commit/45ded474f4db91ffe32c4b7d0341cb8cfc4f4e8f))
-  * `.largetype` not centered ([c4be3b14](https://github.com/sparanoid/sparanoid.com/commit/c4be3b14df34583bef030258c38e34626baa6279))
-* **template:** excerpts should be markdownified for predefined `excerpt` YAML front matter ([654ed8d5](https://github.com/sparanoid/sparanoid.com/commit/654ed8d5fc6fd49c9b87bf87d14dfc29450e3cb6))
+## [4.12.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.12.2)
 
+### Enhancements
 
-#### Features
+- Add missing Italian localized UI text strings. [#1793](https://github.com/mmistakes/minimal-mistakes/pull/1793)
+- Update [jekyll-toc](https://github.com/allejo/jekyll-toc) to `v1.0.5`.
+- Support heading levels 1-6 in table of contents with proper indentation styling. [#1782](https://github.com/mmistakes/minimal-mistakes/issues/1782)
+- Use relative links for masthead navigation menu items when possible. [#1784](https://github.com/mmistakes/minimal-mistakes/pull/1784)
+- Add `.emoji` class to author sidebar to normalize image sizes. [#1780](https://github.com/mmistakes/minimal-mistakes/pull/1780)
+- Update Staticman commit message to include comment author's name.
+- Improve side navigation spacing in relation to masthead.
+- Style archive links with appropriate link color.
+- Adjust feature row spacing and font-sizes.
+- Use sentence case and increase font-sizes for improved readability in table of contents.
+- Add `{{ content }}` to `home` layout. [#1775](https://github.com/mmistakes/minimal-mistakes/pull/1775)
 
-* bump Jekyll version to 2.5.2, better performance ([a0294f88](https://github.com/sparanoid/sparanoid.com/commit/a0294f883f17fb30fcaca02d26db718564263251))
-* update `apple-touch-icon.png` for @3x size ([38bf31ac](https://github.com/sparanoid/sparanoid.com/commit/38bf31ac6932320adf74decdb965ce7cfc1a41d0))
-* **donate:** update copywriting ([a5f9387b](https://github.com/sparanoid/sparanoid.com/commit/a5f9387bd57b7004d06d5885ed74b747480c710c))
-* **grunt:** add `grunt-lesslint` support ([0b928803](https://github.com/sparanoid/sparanoid.com/commit/0b928803f70a301c3766e8f6029261c5d0d23099))
-* **style:**
-  * placeholder text color ([3f6fbf63](https://github.com/sparanoid/sparanoid.com/commit/3f6fbf63141a1b076353a785ed1662391b3d129c))
-  * update `text-align` method ([2665a791](https://github.com/sparanoid/sparanoid.com/commit/2665a791d7e24a62daa6b75b4e5e350776b447d9))
-  * simplified align center method ([aa0a5fbf](https://github.com/sparanoid/sparanoid.com/commit/aa0a5fbf9e977c647aff83202280b1046009ca46))
-* **template:**
-  * add feed excerpt output ([8fd053c5](https://github.com/sparanoid/sparanoid.com/commit/8fd053c5b7d4aaff66c4c52566cf06d51739e84b))
-  * remove Google+ authority support, I don't like it. ([0dd4efae](https://github.com/sparanoid/sparanoid.com/commit/0dd4efaec8a4622bdcde0b4a063361519e1c9043))
-  * add multiple authors support ([57337fa1](https://github.com/sparanoid/sparanoid.com/commit/57337fa15fa078437bff41536950b811da79cf82))
-  * new email newsletter signup page ([a0652321](https://github.com/sparanoid/sparanoid.com/commit/a0652321e3a30dac96c418b8aae6b1cd9278cf63))
-  * more centered text for pages ([2e476d91](https://github.com/sparanoid/sparanoid.com/commit/2e476d91166e961044aa21bf7475948344dfb057))
+## [4.12.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.12.1)
 
+### Enhancements
 
-#### Breaking Changes
+- Add missing French localized UI text strings. [#1769](https://github.com/mmistakes/minimal-mistakes/pull/1769) [#1741](https://github.com/mmistakes/minimal-mistakes/pull/1741)
+- Update Font Awesome to version [`5.2.0`](https://github.com/FortAwesome/Font-Awesome/blob/master/CHANGELOG.md). [#1754](https://github.com/mmistakes/minimal-mistakes/pull/1754)
+- Add documentation note to update root `Gemfile` when forking theme.
 
-* Now I can use multiple users for posts, use the following variable in Front Matter:
+### Bug Fixes
 
-`author: tunghsiao`
+- Remove slash at the beginning of `path` in staticman.yml example. [#1772](https://github.com/mmistakes/minimal-mistakes/pull/1772)
+- Fix `read_time` logic in header image overlay. [#1756](https://github.com/mmistakes/minimal-mistakes/pull/1756)
 
-Author information can be added in `./_app/_data/authors.yml`
- ([57337fa1](https://github.com/sparanoid/sparanoid.com/commit/57337fa15fa078437bff41536950b811da79cf82))
+## [4.12.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.12.0)
 
+### Enhancements
 
-<a name="24.1.5"></a>
-### 24.1.5 (2014-11-18)
+- Add Hungarian localized UI text strings. [#1682](https://github.com/mmistakes/minimal-mistakes/pull/1682)
+- DRY `tags_max` calculation in tags.html layout. [#1696](https://github.com/mmistakes/minimal-mistakes/pull/1696)
+- DRY `categories_max` calculation in categories.html layout.
+- Add support for ["sticking" table of contents](https://mmistakes.github.io/minimal-mistakes/layout-table-of-contents-sticky/) to top of page via `toc_sticky: true` YAML Front Matter.
+- Add support for captioning images in feature row helper via `image_caption` YAML Front Matter. [#1440](https://github.com/mmistakes/minimal-mistakes/issues/1440)
+- Add [Google Custom Search Engine](https://cse.google.com/cse) support. [#1652](https://github.com/mmistakes/minimal-mistakes/issues/1652)
+- Update Font Awesome to version [`5.1.13`](https://github.com/FortAwesome/Font-Awesome/blob/master/CHANGELOG.md)
+- Add "Pets" sample archive page to documentation site. [#1664](https://github.com/mmistakes/minimal-mistakes/pull/1664)
+- Add GitLab social icon brand color. [#1653](https://github.com/mmistakes/minimal-mistakes/issues/1653)
+- Prevent line breaks between FontAwesome icon and text in footer social links. [#1659](https://github.com/mmistakes/minimal-mistakes/issues/1659)
 
+### Bug Fixes
 
-#### Bug Fixes
+- Set default `title_separator`. [#1701](https://github.com/mmistakes/minimal-mistakes/pull/1701)
+- Fix `naver_site_verification` typo in /_includes/seo.html. [#1687](https://github.com/mmistakes/minimal-mistakes/pull/1687)
+- Fix table of contents missing borders. [#1675](https://github.com/mmistakes/minimal-mistakes/issues/1675)
+- Fix link to "Recipes" sample archive on documentation site. [#1664](https://github.com/mmistakes/minimal-mistakes/pull/1664)
+- Update example Reddit social share interpolation syntax in documentation. [#1656](https://github.com/mmistakes/minimal-mistakes/issues/1656)
+- Fix "Back to Top" links on pages that use [header overlays](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#header-overlay).
 
-* **style:** images in posts are not center aligned ([a3cf785b](https://github.com/sparanoid/sparanoid.com/commit/a3cf785b97857ff189278e386fd3819aec4ced0f))
+## [4.11.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.11.2)
 
+### Enhancements
 
-#### Features
+* Update Font Awesome to version [`5.0.12`](https://github.com/FortAwesome/Font-Awesome/blob/master/CHANGELOG.md).
+* Add Slovak localized UI text strings. [#1613](https://github.com/mmistakes/minimal-mistakes/pull/1613)
+* Add option to anonymize IP addresses of hits sent to Google Analytics. [#1636](https://github.com/mmistakes/minimal-mistakes/pull/1636)
 
-* update `abbr` appearance, remove title hack ([a76fe931](https://github.com/sparanoid/sparanoid.com/commit/a76fe931a9056cb11a16b6fc0f8c9da90eeebda1))
-* **grunt:**
-  * rename all `server` task names to `serve` ([2697fa90](https://github.com/sparanoid/sparanoid.com/commit/2697fa90e71a4ced38d002dd88e78992b65ba8d6))
-  * add live reload support (Browsersync) ([9f78f654](https://github.com/sparanoid/sparanoid.com/commit/9f78f654ffd943b1bb3dd669797c2ebaa969e803))
-* **print:** introduce print styles ([39fbb109](https://github.com/sparanoid/sparanoid.com/commit/39fbb10968ade3ddb79fb4d1a20508e583972182))
-* **style:** split style fixes for plug-ins into a isolated stylesheet ([8e587481](https://github.com/sparanoid/sparanoid.com/commit/8e5874815d9e2b1067e4a865d4aaf072a218054e))
-* **template:** use `<h1>` for post list ([530f63c2](https://github.com/sparanoid/sparanoid.com/commit/530f63c28093ebfc72fc5f99fbcf6440c9e70335))
+### Bug Fixes
 
+* Use correct text string for "Back to Top" link. [#1595](https://github.com/mmistakes/minimal-mistakes/issues/1595)
+* Add conditionals for showing `reCaptcha.siteKey` and `reCaptcha.secret` in Staticman comments form.
 
-#### Breaking Changes
+## [4.11.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.11.1)
 
-* Now this project supports Browsersync for page live reloading, script snippet is inserted after `<!-- BS_INSERT -->` in `top.html`
- ([9f78f654](https://github.com/sparanoid/sparanoid.com/commit/9f78f654ffd943b1bb3dd669797c2ebaa969e803))
+### Enhancements
 
+* Add default `theme` and `remote_theme` values to `_config.yml`.
+* Add new layouts (`posts`, `categories`, `tags`, `collection`, `category`, and `tag`) for easier archive page creation.
 
-<a name="24.1.4"></a>
-### 24.1.4 (2014-11-03)
+### Bug Fixes
 
+* Replace `absolute_url` filter with `relative_url` where it makes sense (asset/navigation related paths). [#1588](https://github.com/mmistakes/minimal-mistakes/issues/1588)
+* Fix search excerpts that run together because of implied spaces.
 
-#### Bug Fixes
+## [4.10.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.10.1)
 
-* **config:** add missing `force_utf_8` option ([2ef2dc44](https://github.com/sparanoid/sparanoid.com/commit/2ef2dc44a4e4a38572e40a708312886aa3d904b0))
-* **style:** re-apply navigation margin fix for align left layout ([77b5fc19](https://github.com/sparanoid/sparanoid.com/commit/77b5fc197e65f80c0864b8e9d921bcd8ba2d3f46))
-* **template:** add missing `site.colorful_list ` scope ([8575c197](https://github.com/sparanoid/sparanoid.com/commit/8575c19739b83af154b99fee029c026a9cf359e8))
+### Enhancements
 
+* Update jQuery to version `3.3.1`. [#1491](https://github.com/mmistakes/minimal-mistakes/issues/1491)
+* Add link to jekyll-algolia's `files_to_exclude` documentation.
+* Update Font Awesome to version [`5.0.8`](https://github.com/FortAwesome/Font-Awesome/blob/master/CHANGELOG.md). [#1561](https://github.com/mmistakes/minimal-mistakes/pull/1561)
+* Activate Algolia search for documentation site. [#1570](https://github.com/mmistakes/minimal-mistakes/issues/1570)
+* Add missing German translations. [#1577](https://github.com/mmistakes/minimal-mistakes/pull/1577)
+* Add support for Google Analytics with global site tag (gtag.js) [#1563](https://github.com/mmistakes/minimal-mistakes/pull/1563)
 
-<a name="24.1.3"></a>
-### 24.1.3 (2014-11-03)
+### Bug Fixes
 
+* Focus Algolia search input after clicking on search toggle.
 
-#### Bug Fixes
+## [4.10.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.10.0)
 
-* collar container width ([89e4eac6](https://github.com/sparanoid/sparanoid.com/commit/89e4eac6780decebe9fb2f0c52e06fce92f58387))
-* **post:** remove intense support for "Moonstruck Princess Extended" ([b263b5c9](https://github.com/sparanoid/sparanoid.com/commit/b263b5c97182ce33e683302cbeca82ea5e537619))
-* **style:** reset header text align for justified text ([70d49911](https://github.com/sparanoid/sparanoid.com/commit/70d49911ea90d31bb578e7e13c1d11f084621f6e))
-* **template:** remove deprecated minimal-ui ([db466892](https://github.com/sparanoid/sparanoid.com/commit/db466892ac59908c6853afe0b5400c3a65c3bfdb))
+### Enhancements
 
+* Add support for [Algolia](https://www.algolia.com/) search provider ([see demo](https://mmistakes.github.io/minimal-mistakes-algolia-search/)). [#1416](https://github.com/mmistakes/minimal-mistakes/issues/1416)
 
-#### Features
+## [4.9.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.9.1)
 
-* add `force_utf_8` option ([0fb4c702](https://github.com/sparanoid/sparanoid.com/commit/0fb4c702aeaa5dd5306f0b19f40aaacb3f2f5b5f))
-* update logo ([8666ee91](https://github.com/sparanoid/sparanoid.com/commit/8666ee917456620ec863c989b15496e47530ae43))
-* **post:**
-  * update post heading ([9be83090](https://github.com/sparanoid/sparanoid.com/commit/9be83090995ad8986a8a723033f062035af346cc))
-  * new post “Chinese Copywriting Guidelines” ([67e3ea35](https://github.com/sparanoid/sparanoid.com/commit/67e3ea3571926cbc02e3fbe1443f41771ed79a73))
-  * update external link for “Free” Dribbble Invite ([f5763fe8](https://github.com/sparanoid/sparanoid.com/commit/f5763fe837bcacfe404da626344c134e2c003dab))
-  * update post excerpts ([f57c1f46](https://github.com/sparanoid/sparanoid.com/commit/f57c1f460ee809e4bb498d3b7dd505a602a4ff5b))
-  * add new post “Space Lover” and “Disable WYSIWYG” ([f9b5f4ad](https://github.com/sparanoid/sparanoid.com/commit/f9b5f4ad945ee42da13cb983c2e1a1dab00b32fe))
-* **style:**
-  * tweak font size for small devices ([66394316](https://github.com/sparanoid/sparanoid.com/commit/663943163a3a523952b0e0e1084938c2d8255dbc))
-  * update header font size for small devices ([52e3ebd7](https://github.com/sparanoid/sparanoid.com/commit/52e3ebd72c4210da504629824b331c9d808d8c78))
-  * add a fun transition ([6692e032](https://github.com/sparanoid/sparanoid.com/commit/6692e032de7e599fd088411e0528e4d6fe4dec1e))
-  * remove custom CSS background check ([fbfff18c](https://github.com/sparanoid/sparanoid.com/commit/fbfff18c3b537972d7cba35397a239ea2d9227d8))
-  * add `colorful_list` option that styles post link color (if defined) for article list ([f2412163](https://github.com/sparanoid/sparanoid.com/commit/f24121635fd1d6b4e3cdb5576794a0323cb388c1))
-* **template:**
-  * reuse `h1` to post heading ([a85184a9](https://github.com/sparanoid/sparanoid.com/commit/a85184a9ce785fc679e6ce95f7f17323109ed6f5))
-  * add alternative text align mode ([008215fc](https://github.com/sparanoid/sparanoid.com/commit/008215fcbe8f47c8079dab42664771f777f42c4b))
-  * add `post-content` and `page-content` for convenient ([38be1975](https://github.com/sparanoid/sparanoid.com/commit/38be1975044dd9367fad8abb4dfb2dcfa7e862ff))
-  * update list template ([800c5ee3](https://github.com/sparanoid/sparanoid.com/commit/800c5ee3c577011a8a6ce21328b3b0afac155369))
+### Enhancements
 
+* Simplify year archive Liquid.
+* Add documentation on how to downgrade theme.
+* Improve greedy navigation's layout when JavaScript is disabled.
+* Improve SEO include by grouping similar tags, reducing white-space, and adding `article:modified_time`. [#1456](https://github.com/mmistakes/minimal-mistakes/pull/1456)
+* Minify `assets/js/lunr/lunr.js`.
+* Improve calculation of Greedy navigation's `availableSpace`.
+* Add Danish and Russian translations for new search strings. [#1472](https://github.com/mmistakes/minimal-mistakes/pull/1472) [#1477](https://github.com/mmistakes/minimal-mistakes/pull/1477)
+* Indicate that archive titles are links with an underline.
+* Remove `base_path` include from `/test` pages.
+* Reduce font-size of page meta in list/grid items.
+* Improve feature row styling when used with `archive` layout. [#1484](https://github.com/mmistakes/minimal-mistakes/issues/1484)
+* Improve German translations. [#1511](https://github.com/mmistakes/minimal-mistakes/pull/1511)
+* Update Font Awesome to `5.0.6`. [#1513](https://github.com/mmistakes/minimal-mistakes/pull/1513)
+* Add `wide` variant to single layout. [#1516](https://github.com/mmistakes/minimal-mistakes/pull/1516)
 
-#### Breaking Changes
+### Bug Fixes
 
-* Now `<h1>` become the primary post / page title instead of `<h2>`, you should update your post to use the new structure
- ([a85184a9](https://github.com/sparanoid/sparanoid.com/commit/a85184a9ce785fc679e6ce95f7f17323109ed6f5))
-* Force UTF-8 encoding, enable this will simply add <meta charset="utf-8"> to the head of your pages, it's useful for local development since local server doesn't send charset in their respond header.
- ([0fb4c702](https://github.com/sparanoid/sparanoid.com/commit/0fb4c702aeaa5dd5306f0b19f40aaacb3f2f5b5f))
+* Allow `author` to accept an object or string. [#289](https://github.com/mmistakes/minimal-mistakes/issues/289)
+* Fix syntax highlighting line number styling inconsistency. [#1467](https://github.com/mmistakes/minimal-mistakes/issues/1467)
+* Fix author sidebar icon colors for dark skins. [#1482](https://github.com/mmistakes/minimal-mistakes/issues/1482)
+* Remove misleading underline hover state on feature row items.
+* Properly escape quotes in `site.social.name` and `site.name`. [#1485](https://github.com/mmistakes/minimal-mistakes/pull/1485)
+* Fix typo in upgrading documentation. [#1487](https://github.com/mmistakes/minimal-mistakes/pull/1487)
+* Fix `border-bottom` for Gist line numbers.
+* Replace `|` with HTML entity when used as title separator. [#760](https://github.com/mmistakes/minimal-mistakes/issues/760)
 
+## [4.9.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.9.0)
 
-<a name="24.1.2"></a>
-### 24.1.2 (2014-08-21)
+### Enhancements
 
+* Add `show_overlay_excerpt` for disabling overlay image excerpt text. [#1436](https://github.com/mmistakes/minimal-mistakes/pull/1436)
+* Update remote theme installation instructions in Quick Start Guide. [#1439](https://github.com/mmistakes/minimal-mistakes/pull/1439)
+* Reduce visual weight of code blocks.
+* Add Lunr.js Greek stemmer. [#1445](https://github.com/mmistakes/minimal-mistakes/pull/1445)
+* Update Font Awesome 5 [SVG with JavaScript version](https://fontawesome.com/how-to-use/svg-with-js). [#1446](https://github.com/mmistakes/minimal-mistakes/pull/1446)
+  * Note: if Font Awesome icons were used in the content of posts/pages or custom table of contents, find and replace any icons that have different names between version 4 and 5. Make sure to read the [complete list](https://fontawesome.com/how-to-use/upgrading-from-4#icon-name-changes-full) on Font Awesome's site.
+* Reduce size of Lunr.js search JSON data and introduce `site.search_full_content` flag for limiting size of JSON file. [#1449](https://github.com/mmistakes/minimal-mistakes/pull/1449)
+* Improve syntax highlighting styles. [#1450](https://github.com/mmistakes/minimal-mistakes/pull/1450)
 
-#### Bug Fixes
+### Bug Fixes
 
-* **post:** update times symbol for post "Antiskill, Judgment Icon Set and Screensaver" ([8f053ae5](https://github.com/sparanoid/sparanoid.com/commit/8f053ae5b18636cdd98959818d345eaeaa97b3fc))
-* **style:** correct sub list margin ([e01d8830](https://github.com/sparanoid/sparanoid.com/commit/e01d8830ac1e7d95a99af2fe674cffe213e928d4))
-* **template:**
-  * correct style and script paths for subdirectory setup ([20f9a50f](https://github.com/sparanoid/sparanoid.com/commit/20f9a50fbcbc8cf2aafa705d38dbbda59851b5c8))
-  * avoid “layout not found” error introduced since Jekyll 2.2.0 ([b4f86289](https://github.com/sparanoid/sparanoid.com/commit/b4f86289a084343a28d1dff5f4f6d2a56ad35d94))
-  * use Katakana middle dots ([cc0f0720](https://github.com/sparanoid/sparanoid.com/commit/cc0f0720ae99f05311ecc087afa7a0493c33241e))
-  * use original post subheading ([e528b137](https://github.com/sparanoid/sparanoid.com/commit/e528b137a000da1c844045236af2da366b41549a))
+* Fix code block extra white-space when using [Jekyll's highlight tag](https://jekyllrb.com/docs/templates/#code-snippet-highlighting) with `linenos`. [#1437](https://github.com/mmistakes/minimal-mistakes/issues/1437)
+* Round top-right corner of code block icon.
+* Remove Lunr.js trimmer and bring back colons. [#1445](https://github.com/mmistakes/minimal-mistakes/pull/1445)
+* Fix sticky `.sidebar` that overlaps main content when resizing viewport. [#1447](https://github.com/mmistakes/minimal-mistakes/issues/1447)
 
+## [4.8.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.8.1)
 
-#### Features
+### Enhancements
 
-* **style:**
-  * move `syntax.less` to `custom.less` ([b6fdb462](https://github.com/sparanoid/sparanoid.com/commit/b6fdb462c95b269cab2e50726dab5534f04e47e0))
-  * add some space for tables ([35cd7830](https://github.com/sparanoid/sparanoid.com/commit/35cd78309ed85af069ab6392c686fa9e2be2f49c))
-* **template:**
-  * add custom CSS support for pages ([742cbfcd](https://github.com/sparanoid/sparanoid.com/commit/742cbfcde3a37206a4a9a0d7c7fd94179979458f))
-  * add `lang` YAML front-matter data ([a3d25f97](https://github.com/sparanoid/sparanoid.com/commit/a3d25f978638d42cbd1e8ce5ee55895c66bc92cc))
-  * add `lang` YAML front-matter data ([911353f1](https://github.com/sparanoid/sparanoid.com/commit/911353f1b5dabed81d13eb247262673abe382e14))
-  * hide post from Atom feed ([32f36de7](https://github.com/sparanoid/sparanoid.com/commit/32f36de79c44a6fc181b328a7489ed35a3bce2ff))
+* Add linkback functionality to author avatar and name in sidebar via `author.home`. [#1386](https://github.com/mmistakes/minimal-mistakes/pull/1386)
+* Add Japanese localized UI text strings. [#1411](https://github.com/mmistakes/minimal-mistakes/pull/1411)
+* Update Lunr.js to 2.1.5 [#1419](https://github.com/mmistakes/minimal-mistakes/pull/1419)
 
+### Bug Fixes
 
-#### Breaking Changes
+* Fixed broken link to Staticman's page [#1422](https://github.com/mmistakes/minimal-mistakes/pull/1422)
+* Fix Lunr search to work with number tags. [#1409](https://github.com/mmistakes/minimal-mistakes/issues/1409) [#1419](https://github.com/mmistakes/minimal-mistakes/pull/1419)
 
-* Now you can define `lang` tag for your post, simply add `lang` to your post front-matter data. ([a3d25f97](https://github.com/sparanoid/sparanoid.com/commit/a3d25f978638d42cbd1e8ce5ee55895c66bc92cc)):
+## [4.8.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.8.0)
 
-for example:
+### Enhancements
 
-```
-lang: ar
-```
+* Open social share links in a new window. [#1357](https://github.com/mmistakes/minimal-mistakes/pull/1357)
+* Remove Alexa.com verification due to retiring of "[Claim Your Site](https://support.alexa.com/hc/en-us/articles/219135887)" feature. [#1350](https://github.com/mmistakes/minimal-mistakes/issues/1350)
+* Disable analytics in `development` environment. [#1362](https://github.com/mmistakes/minimal-mistakes/pull/1362)
+* Disable comments in `development` environment. [#1363](https://github.com/mmistakes/minimal-mistakes/pull/1363)
+* Exclude specific pages/posts from search index by adding `search: false` to the YAML Front Matter. [#1369](https://github.com/mmistakes/minimal-mistakes/pull/1369)
+* Add optional `description` key to masthead links for clarifying their purpose with the `title` attribute. [#1380](https://github.com/mmistakes/minimal-mistakes/pull/1380)
+* Incorporate site search into masthead. [#1383](https://github.com/mmistakes/minimal-mistakes/pull/1383)
+* Update gem dependencies. [#1388](https://github.com/mmistakes/minimal-mistakes/pull/1388)
 
-then define your own styles in `custom.less`:
+### Bug Fixes
 
-```css
-[lang=ar] {
-  direction: rtl;
-}
-```
+* Fix `post.content` typo in `assets/js/lunr-en.js`. [#1354](https://github.com/mmistakes/minimal-mistakes/pull/1354)
+* Fix "lunr-en.js:1 Uncaught SyntaxError: Unexpected token <" in `assets/js/lunr-en.js`. [#1356](https://github.com/mmistakes/minimal-mistakes/pull/1356)
+* Rename Naver verification `naver_site_verification` to be consistent with other site variables.
+* Fix button class in "Post with Table Of Contents" demo content. [#1368](https://github.com/mmistakes/minimal-mistakes/pull/1368)
+* Fix capitalization of WordPress in documentation. [#1381](https://github.com/mmistakes/minimal-mistakes/pull/1381)
+* Fix zh-HK UI text to point to Traditional Chinese. [#1374](https://github.com/mmistakes/minimal-mistakes/issues/1374) [#1389](https://github.com/mmistakes/minimal-mistakes/pull/1389)
 
-* Add `hidden: true` as YAML front-matter data to the post you want to hide from your feed output.
- ([32f36de7](https://github.com/sparanoid/sparanoid.com/commit/32f36de79c44a6fc181b328a7489ed35a3bce2ff))
+## [4.7.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.7.1)
 
+### Enhancements
 
-<a name="24.1.1"></a>
-### 24.1.1 (2014-07-18)
+* Add search layout powered by [Lunr](https://lunrjs.com/). [#1353](https://github.com/mmistakes/minimal-mistakes/pull/1353)
+* Use [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme) for demo site. [#1339](https://github.com/mmistakes/minimal-mistakes/issues/1339)
+* Add note about WordPress to Staticman comment migration tool in documentation. [#1346](https://github.com/mmistakes/minimal-mistakes/issues/1346)
 
+### Bug Fixes
 
-#### Bug Fixes
+* Change `http` to `https` for Jekyll and Browserhappy links. [#1342](https://github.com/mmistakes/minimal-mistakes/pull/1342) [#1343](https://github.com/mmistakes/minimal-mistakes/pull/1343)
+* Change `http` author profile links to `https` when supported. [#1349](https://github.com/mmistakes/minimal-mistakes/pull/1349)
+* Fix broken SCSS partial links in layouts documentation. [#1351](https://github.com/mmistakes/minimal-mistakes/issues/1351)
 
-* **post:** fix error page links for post “IterCast” ([da1a5fd5](https://github.com/sparanoid/sparanoid.com/commit/da1a5fd5bc85d5e2e8c60375a7564d73693c115c))
-* **style:**
-  * remove heading hyphens support ([e46edbc3](https://github.com/sparanoid/sparanoid.com/commit/e46edbc368bcc847d29b5d70638b2b1844a4f81f))
-  * use `rem` for alternative title font size ([5e77e4e5](https://github.com/sparanoid/sparanoid.com/commit/5e77e4e50cd3bacfc9c8d37dd5d1f9b2a7f1dca8))
-  * remove deprecated styles, fix cite footer font color ([61bc2cce](https://github.com/sparanoid/sparanoid.com/commit/61bc2cce2bb76c41d90ef3f15841b1b0ad71008c))
-* **template:**
-  * apply markdownify for post description ([91e00249](https://github.com/sparanoid/sparanoid.com/commit/91e0024914dd6ffaf553c1d8155e213036536119))
-  * correct error page title ([3821c6b2](https://github.com/sparanoid/sparanoid.com/commit/3821c6b2b2796527e698367c4bcb9489aa57ef31))
+## [4.7.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.7.0)
 
+### Enhancements
 
-#### Features
+* Add `alt` description to avatar image. [#1226](https://github.com/mmistakes/minimal-mistakes/pull/1226)
+* Clarify documentation about which `assets` folders and files to remove when migrating to the gem version of the theme. [#1268](https://github.com/mmistakes/minimal-mistakes/issues/1268)
+* Add note about Staticman GitHub compatibility. [#1273](https://github.com/mmistakes/minimal-mistakes/issues/1273)
+* Add missing Brazilian Portuguese translations to `ui-text.yml`. [#1278](https://github.com/mmistakes/minimal-mistakes/pull/1278)
+* Update font stack documentation. [#1292](https://github.com/mmistakes/minimal-mistakes/pull/1292)
+* Improve accessibility of navigation menu button. [#1099](https://github.com/mmistakes/minimal-mistakes/issues/1099)
+* Add Naver Webmaster Tools verification. [#1286](https://github.com/mmistakes/minimal-mistakes/pull/1286)
+* Add support for Staticman v2 endpoint and reCAPTCHA.
+* Add Polish localized UI text strings. [#1304](https://github.com/mmistakes/minimal-mistakes/pull/1304)
+* Add toggleable table of contents via YAML Front Matter. Note: `toc` helper include will be deprecated in next major version. [#1222](https://github.com/mmistakes/minimal-mistakes/issues/1222)
+* Refactor seo.html include to DRY-up page image handling.
+* Add support for setting what image is used by OpenGraph and Twitter via `page.header.og_image`. [#1316](https://github.com/mmistakes/minimal-mistakes/issues/1316)
+* Fix the spelling of some product names in the author profile. [#1328](https://github.com/mmistakes/minimal-mistakes/pull/1328)
+* Add `aqua`, `neon`, and `plum` skins. [#1336](https://github.com/mmistakes/minimal-mistakes/pull/1336)
+* Update **jekyll-toc** with heading classes fix. [#1337](https://github.com/mmistakes/minimal-mistakes/pull/1337)
+* Remove `+` from Google+ author link to allow non-vanity URLs. [#1319](https://github.com/mmistakes/minimal-mistakes/pull/1319)
 
-* **script:** add `intense.js` exclude rule ([73a8e250](https://github.com/sparanoid/sparanoid.com/commit/73a8e2501d4fefc6975d3dd3b1d995b4c71d7a0b))
-* **style:**
-  * dynamic text color for `code` and `pre` ([e153b87a](https://github.com/sparanoid/sparanoid.com/commit/e153b87a87b5e5ede358f928e8f7062d6a8d7f67))
-  * update alternative title font size ([416c4161](https://github.com/sparanoid/sparanoid.com/commit/416c4161ee291664e3b3899a0e84798722e5445d))
-  * add alternative title font size. By default all heading levels have the same font size, but many people may not like this, so here's an alternative font size stack. ([277ead44](https://github.com/sparanoid/sparanoid.com/commit/277ead44fed62c13f31bdc5b9bfcd76aaf47d8a6))
-  * fix GitHub Gist default style, more layout padding and list nesting fixes ([32bb4053](https://github.com/sparanoid/sparanoid.com/commit/32bb4053626ba5be624674ab4be671654d249448))
-  * better custom color scheme support, syntax highlighting also support different c ([e17eb740](https://github.com/sparanoid/sparanoid.com/commit/e17eb740516b99abb60c888091e9757eaf9e43fc))
-* **template:** remove `amsf` option, add `clean_homepage` and `credits` options ([89016b8d](https://github.com/sparanoid/sparanoid.com/commit/89016b8d0d84c162e2c22fcb4a4af8f0377a0f06))
+### Bug Fixes
 
+* Fix system font rendering in Chrome on macOS/OS X. [#1290](https://github.com/mmistakes/minimal-mistakes/pull/1290)
+* Fix extra padding in syntax highlighted code blocks due to Rouge 2 adding `<div class="highlight"></div>` to markup.
 
-#### Breaking Changes
+## [4.6.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.6.0)
 
-* Please note that templates should be updated for new options
- ([89016b8d](https://github.com/sparanoid/sparanoid.com/commit/89016b8d0d84c162e2c22fcb4a4af8f0377a0f06))
+### Enhancements
 
+* Test strict Front Matter in `/test` site. [#1236](https://github.com/mmistakes/minimal-mistakes/pull/1236)
+* Rename `gems` key to `plugins`. [#1239](https://github.com/mmistakes/minimal-mistakes/pull/1239)
+* Add [YIQ Color Contrast](https://github.com/easy-designs/yiq-color-contrast) mixin for determining lightness of a color.
+* DRY up button CSS using Sass lists and YIQ Color Contrast mixin.
+* Add `btn--primary` button class. **Note:** elements that were previously using only a `.btn` class will now also need `.btn--primary` (eg. `<a class="btn btn--primary" href="#">my link</a>`).
+* Add `air`, `contrast`, `dark`, `dirt`, `mint`, and `sunrise` skin color options. [#1208](https://github.com/mmistakes/minimal-mistakes/issues/1208)
+* Allow scripts in `<head>` and before `</body>` to be added/overridden with `head_scripts` and `footer_scripts` arrays in `_config.yml`. [#1241](https://github.com/mmistakes/minimal-mistakes/pull/1241)
+* Update JavaScript dependencies: jQuery `v3.2.1`, jQuery Smooth Scroll `v2.2.0`, and Magnific Popup `v1.1.0`. [#328690652](https://github.com/mmistakes/minimal-mistakes/pull/1241#issuecomment-328690652)
 
-<a name="24.1.0"></a>
-## 24.1.0 (2014-07-14)
+## [4.5.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.5.2)
 
+### Enhancements
 
-#### Bug Fixes
+* Add `.page__comments-form` to "non-printing" selectors in print styles. [#1195](https://github.com/mmistakes/minimal-mistakes/pull/1195)
+* Add LinkedIn and Steam author sidebar examples to `_config.yml`. [#1203](https://github.com/mmistakes/minimal-mistakes/pull/1203) [#1204](https://github.com/mmistakes/minimal-mistakes/pull/1204)
+* Remove the http-equiv="cleartype" meta tag. [#1087](https://github.com/mmistakes/minimal-mistakes/pull/1087)
+* Clarify documentation for `jekyll-archives` plugin and how to install. [#1206](https://github.com/mmistakes/minimal-mistakes/pull/1206)
+* Clarify documentation around taxonomy page and index generation. [#1207](https://github.com/mmistakes/minimal-mistakes/pull/1207)
+* Fix "Posts by tag" grammar in documentation. [#1209](https://github.com/mmistakes/minimal-mistakes/pull/1209)
+* Improve Chinese `date_label` and `minute_read` translations in `ui-text.yml`. [#1205](https://github.com/mmistakes/minimal-mistakes/pull/1205) [#1211](https://github.com/mmistakes/minimal-mistakes/pull/1211)
+* Add note to Quick-Start Guide about GitHub Pages hosting alternatives that allow 3rd party gem themes and Jekyll plugins.
+* Add note to configuration documentation about Cloudflare minification as an alternative to `layout: compress`. [#1217](https://github.com/mmistakes/minimal-mistakes/pull/1217)
+* Show 4 latest posts in "You May Also Enjoy" module when `related: true` and no related posts are found due to `lsi` ([latent semantic indexing](https://en.wikipedia.org/wiki/Latent_semantic_analysis#Latent_semantic_indexing)) being disabled on GitHub Pages. [#554](https://github.com/mmistakes/minimal-mistakes/issues/554)
+* Truncate archive item titles' that overflow with an ellipsis. [#1213](https://github.com/mmistakes/minimal-mistakes/issues/1213)
 
-* **grunt:**
-  * remove deprecated Grunt task `archive` ([bb62c8eb](https://github.com/sparanoid/sparanoid.com/commit/bb62c8ebed4e93e565b090c6ff8805b8377dd27c))
-  * wrong script compile path ([f1bb55aa](https://github.com/sparanoid/sparanoid.com/commit/f1bb55aa1846aab5574d2c2430ac99aaee194fe4))
-* **post:**
-  * remove a bunch of gibberish generated by Sketch ([6f8eca38](https://github.com/sparanoid/sparanoid.com/commit/6f8eca3846d97d781488153429bf4869029ed6f1))
-  * update IterCast SVG title ([3276d9f6](https://github.com/sparanoid/sparanoid.com/commit/3276d9f625185f94624b5671f3ec46e74718b51e))
-* **template:** temporary fix HTML entities for post title ([7be60fc2](https://github.com/sparanoid/sparanoid.com/commit/7be60fc274fd1c301b0d732d9dc0614e9f91f667))
+### Bug Fixes
 
+* Fix license URL in README file. [#1189](https://github.com/mmistakes/minimal-mistakes/pull/1189)
+* Reduce amount of blank pages when printing in Chrome. [#1196](https://github.com/mmistakes/minimal-mistakes/issues/1196)
+* Remove `#disqus_thread` duplicate from `comments-providers/disqus.html` as it is already in `comments.html` include. [#1199](https://github.com/mmistakes/minimal-mistakes/issues/1199)
+* Fix Liquid syntax errors in `tag-list.html` and `category-list.html` includes by removing parenthesis in `assign`s. [#1223](https://github.com/mmistakes/minimal-mistakes/issues/1223)
+* Fix Liquid syntax error: "Expected id but found open_square in `"{{ page.[include.id] }}"`" in `gallery` and `feature_row` includes.
+* Fix Liquid syntax error: "Expected end_of_string but found pipe in `"name in __names | sort"`" in `group-by-array` include.
 
-#### Features
+## [4.5.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.5.1)
 
-* **grunt:** remove `grunt-usemin` support ([326910e8](https://github.com/sparanoid/sparanoid.com/commit/326910e8ab1ab3fa1d16287fe8e62aa8808f3865))
-* **style:** update `.browser` style ([127c5b6d](https://github.com/sparanoid/sparanoid.com/commit/127c5b6dc3251a42485b5a6b673cf0787e91b07e))
-* **template:**
-  * better HTML structure ([fea47fdf](https://github.com/sparanoid/sparanoid.com/commit/fea47fdf729faf8dd43402bea8573ca1514bd6aa))
-  * simplified script structure ([05de9818](https://github.com/sparanoid/sparanoid.com/commit/05de98185643647dadf1adb213899c1e9bf06ad2))
-  * add intense.js support ([58e2c4d8](https://github.com/sparanoid/sparanoid.com/commit/58e2c4d81e232fe1e63db4f9d8aa40dd0599e4b5))
-  * better intense.js cursor handling ([9f5b45ac](https://github.com/sparanoid/sparanoid.com/commit/9f5b45ac9880c4fe693bf437f9963ab53322255e))
+### Enhancements
 
+* Add Greek and Danish localized UI text strings. [#1159](https://github.com/mmistakes/minimal-mistakes/pull/1159) [#1188](https://github.com/mmistakes/minimal-mistakes/pull/1188)
+* Remove blank YAML Front Matter from JavaScript banner. [#1158](https://github.com/mmistakes/minimal-mistakes/issues/1158)
+* Improve `page` and `archive` layouts to visually center main content and harmonize sidebar widths and placement. [#1166](https://github.com/mmistakes/minimal-mistakes/pull/1166)
+* Increase font-size of code blocks.
+* Reduce indent of nested "table of contents" links.
+* Extend [archive grid view](https://mmistakes.github.io/minimal-mistakes/docs/layouts/) to the right to better fill the page.
+* URL encode title and page URL in social share links. [#1177](https://github.com/mmistakes/minimal-mistakes/pull/1177)
+* Replace old Disqus script with new Universal Embed Code. [#1179](https://github.com/mmistakes/minimal-mistakes/pull/1179)
 
-#### Breaking Changes
+### Bug Fixes
 
-* Now I can generate production site in a sub-directory in an easier way, just define `base` in `_config.yml` and run `grunt` everything should work
- ([bb62c8eb](https://github.com/sparanoid/sparanoid.com/commit/bb62c8ebed4e93e565b090c6ff8805b8377dd27c))
-* It's expected to use something like `escape_once` from Liquid, but it's buggy right now: https://github.com/Shopify/liquid/issues/283
- ([7be60fc2](https://github.com/sparanoid/sparanoid.com/commit/7be60fc274fd1c301b0d732d9dc0614e9f91f667))
+* Fix positioning of sidebar table of contents when using `layout: splash`. [#1169](https://github.com/mmistakes/minimal-mistakes/issues/1169)
+* Fix "follow" links `z-index` order to avoid overlapping issues. [#1167](https://github.com/mmistakes/minimal-mistakes/issues/1167)
 
+### Maintenance
 
-<a name="24.0.9"></a>
-### 24.0.9 (2014-06-09)
+* Fix typo `words_per_minute` typo in documentation. [#1164](https://github.com/mmistakes/minimal-mistakes/pull/1164)
+* Remove outside and right borders in `table`s.
+* Adjust width of `.sidebar` to match `.sidebar__right`.
+* Add sample documents to ["portfolio" collection](https://mmistakes.github.io/minimal-mistakes/portfolio/) for testing grid view.
+* Fix typo in stylesheets documentation. [#1170](https://github.com/mmistakes/minimal-mistakes/pull/1170)
+* Add note about setting Discourse `server` as a scheme-less URL (eg. `meta.discourse.com` and not `http://meta.discourse.com`) in `_config.yml`. [#1182](https://github.com/mmistakes/minimal-mistakes/issues/1182)
 
+## [4.5.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.5.0)
 
-#### Bug Fixes
+### Enhancements
 
-* **template:**
-  * update footer credit ([2f3aec23](https://github.com/sparanoid/sparanoid.com/commit/2f3aec23fa75072649cece89218045570fea305f))
-  * fix SVG title for Safari Reader mode ([8b7cc843](https://github.com/sparanoid/sparanoid.com/commit/8b7cc843f419c6935c806ccc462dac8e82c3c4b4))
+* Add scrollbar to sidebars with overflowing content that extends outside the viewport's height. [#706](https://github.com/mmistakes/minimal-mistakes/issues/706)
+* Add missing Spanish UI text strings. [#1118](https://github.com/mmistakes/minimal-mistakes/pull/1118)
+* Update Susy to version 3 and rewrite grid CSS to be more readable.
+* Refactor intro animations into a separate Sass variable `$intro-transition` to allow for customizing. [#1147](https://github.com/mmistakes/minimal-mistakes/pull/1147)
+* Add [**jekyll-data**](https://github.com/ashmaroli/jekyll-data) as a dependency to read data files from theme-gem. [#1131](https://github.com/mmistakes/minimal-mistakes/pull/1131)
+* Add support for customizing header image alternative text through YAML Front Matter. [#1138](https://github.com/mmistakes/minimal-mistakes/pull/1138)
 
+### Bug Fixes
 
-#### Features
+* Fix Sass `DEPRECATION WARNING: Passing a string to call()` by [upgrading Susy to version 3](https://github.com/mmistakes/minimal-mistakes/commit/387f8149d6270b876f224a57a07062ffb0647938). [#1114](https://github.com/mmistakes/minimal-mistakes/issues/1114)
+* Fix disappearing author profile links due to tapping the "Follow" button and changing a browser's viewport width to > `$lg`. [#1136](https://github.com/mmistakes/minimal-mistakes/issues/1136)
 
-* split configuration files into 3 files for better user experience ([d5db218f](https://github.com/sparanoid/sparanoid.com/commit/d5db218fdb08862c2e736ab5a3a7ba7d4c414184))
-* **style:** make highlighter theme works for all color scheme (hint: Less color functions) ([5556eef4](https://github.com/sparanoid/sparanoid.com/commit/5556eef4c0dab2458e7e452dd22f45b660355ede))
-* **template:**
-  * move all custom variables to default `_config.yml` ([92a69fb0](https://github.com/sparanoid/sparanoid.com/commit/92a69fb0944451cbb098b9ae2c696d7c2e81d808))
-  * use assign statement for post link ([2b79f39b](https://github.com/sparanoid/sparanoid.com/commit/2b79f39babd38a46b594f342c5bd604b54a92347))
+### Maintenance
 
+* Replace reference to "Basically Basic theme" with **Minimal Mistakes**. [#1149](https://github.com/mmistakes/minimal-mistakes/pull/1149)
+* Add documentation for disabling CSS3 animations. [#1150](https://github.com/mmistakes/minimal-mistakes/pull/1150)
+* Update quickstart, installation, and overriding defaults documentation. [#1151](https://github.com/mmistakes/minimal-mistakes/pull/1151)
 
-#### Breaking Changes
+## [4.4.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.4.2)
 
-* Now all custom variables go to `_config.yml`, original `var.yml` will no longer available. all related template tags have been update for new variable structure. ([92a69fb0](https://github.com/sparanoid/sparanoid.com/commit/92a69fb0944451cbb098b9ae2c696d7c2e81d808))
+### Enhancements
 
+* Add Swedish, Dutch, and Indonesian localized UI text strings. [#996](https://github.com/mmistakes/minimal-mistakes/pull/996) [#1081](https://github.com/mmistakes/minimal-mistakes/pull/1081) [#1101](https://github.com/mmistakes/minimal-mistakes/pull/1101)
+* Add Bitbucket social icon color. [#1009](https://github.com/mmistakes/minimal-mistakes/pull/1009)
+* Add GitLab to author sidebar. [#1050](https://github.com/mmistakes/minimal-mistakes/pull/1050)
+* Add Sass variable for navicon link hover color. [#1089](https://github.com/mmistakes/minimal-mistakes/pull/1089) [#1088](https://github.com/mmistakes/minimal-mistakes/pull/1088)
 
-<a name="24.0.8"></a>
-### 24.0.8 (2014-06-05)
+### Bug Fixes
 
+* Toggle close button on `mouseleave`. [#975](https://github.com/mmistakes/minimal-mistakes/issues/975)
+* Remove extraneous `</a>` and `</li>` tags from `paginator.html` include. [#1038](https://github.com/mmistakes/minimal-mistakes/pull/1038)
+* Fix Google+ comments provider includes. [#1092](https://github.com/mmistakes/minimal-mistakes/issues/1092)
+* Replace category variable used in `_includes/breadcrumbs.html` to `site.category_archive` to avoid conflicts with `site.categories`. [#1063](https://github.com/mmistakes/minimal-mistakes/pull/1063) [#329](https://github.com/mmistakes/minimal-mistakes/issues/329)
 
-#### Features
+### Maintenance
 
-* **post:** update posts for discontinued external links ([744f32f4](https://github.com/sparanoid/sparanoid.com/commit/744f32f46a5052c57bf7bfe272cd238e39fab621))
-* **style:** remove obsoleted FlesSlider styles ([fd75b04c](https://github.com/sparanoid/sparanoid.com/commit/fd75b04c0fb6da967da33083aaf0a18045cba0b5))
-* **template:** update Atom template ([73c236bf](https://github.com/sparanoid/sparanoid.com/commit/73c236bfabfcdb9f2628ff382ae6b3534c9bedc2))
+* Add mention of Greek localized UI text strings to theme documentation. [#972](https://github.com/mmistakes/minimal-mistakes/pull/972)
+* Update Greek localized UI text strings. [#1054](https://github.com/mmistakes/minimal-mistakes/pull/1054)
+* Add documentation for adding teaser images in grid view using `header.teaser`.
 
+## [4.4.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.4.1)
 
-#### Breaking Changes
+### Enhancements
 
-* Now you can use `link_blog` and `rss_excerpt` for your Atom feed ([73c236bf](https://github.com/sparanoid/sparanoid.com/commit/73c236bfabfcdb9f2628ff382ae6b3534c9bedc2)):
-  - `link_blog`: Enable this settings to make your feed Daring Fireball-like link blog. This basically change your <link> value to external link you defined in your posts.
-  - `rss_excerpt`: Use post excerpt instead of full content for RSS feeds, just like WordPress RSS feed output option
+* Add Greek localized UI text strings. [#958](https://github.com/mmistakes/minimal-mistakes/pull/958)
 
+### Bug Fixes
 
-<a name="24.0.7"></a>
-### 24.0.7 (2014-05-16)
+* Fix `video` helper to load Vimeo videos over https. [#945](https://github.com/mmistakes/minimal-mistakes/pull/945)
+* Fix close menu button that was removed when updating Greedy navigation script. [#969](https://github.com/mmistakes/minimal-mistakes/issues/969)
 
+## [4.4.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.4.0)
 
-#### Bug Fixes
+### Enhancements
 
-* **post:** fix post grammar ([d1cdebdd](https://github.com/sparanoid/sparanoid.com/commit/d1cdebdd92a1d38ef81195a21a03346a03b46c1f))
-* **style:**
-  * fix wrong scoped style use ([79e71de0](https://github.com/sparanoid/sparanoid.com/commit/79e71de08a1be4f7a404c94d8d77889af111497f))
-  * avoid line-height override for `jksf` ([d24663fd](https://github.com/sparanoid/sparanoid.com/commit/d24663fddbc4fdac012edd32aab86ad549632d5b))
+* Move SCSS partials to `/_sass/minimal-mistakes` for easier CSS customization.
+* Replace `modified` with `last_modified_at` to leverage various Jekyll plugins that utilize this variable. [#930](https://github.com/mmistakes/minimal-mistakes/pull/930)
+* Add Lithuanian localized UI text. [#924](https://github.com/mmistakes/minimal-mistakes/pull/924)
+* Improve print stylesheet by increasing text contrast, removing elements that don't need to be printed, expanding URLs, and reducing amount of blank pages. [#909](https://github.com/mmistakes/minimal-mistakes/issues/909)
 
+### Maintenance
 
-#### Features
+* Remove extra word in comment. [#911](https://github.com/mmistakes/minimal-mistakes/pull/911)
+* Fix typo in Utility Class docs. [#915](https://github.com/mmistakes/minimal-mistakes/pull/915)
 
-* update apple-touch-icon ([050508b5](https://github.com/sparanoid/sparanoid.com/commit/050508b5aed7553511330650e7d0da629e91607b))
-* **grunt:**
-  * update `html-minifier`, make all whitespace collapsed to one character. ([93bfb422](https://github.com/sparanoid/sparanoid.com/commit/93bfb4222eeb5e1e5e19b3df2164525b617eee81))
-  * better grunt tasks excluding files those need post-process ([bce8cf73](https://github.com/sparanoid/sparanoid.com/commit/bce8cf732f5f691516e04fcc00ab98b904245fac))
-* **post:** new post “AVOS Cloud” ([f6ed5f63](https://github.com/sparanoid/sparanoid.com/commit/f6ed5f634fda7209fedee6a4b8a6a3f692b682bf))
-* **style:**
-  * update status text color ([5a388e1b](https://github.com/sparanoid/sparanoid.com/commit/5a388e1b47123c67994cfcd2cebd9f5c5ed86b10))
-  * more viewport unit ([364c5ad1](https://github.com/sparanoid/sparanoid.com/commit/364c5ad1653d01f6e6758205b8ecbe95eed19ee1))
-* **template:**
-  * make normal image headers responsive ([c5d3a185](https://github.com/sparanoid/sparanoid.com/commit/c5d3a18599fea23650496f1667ff49f6cbbab730))
-  * update template variables ([874ccb06](https://github.com/sparanoid/sparanoid.com/commit/874ccb063f99d2625c3fbf0d8b70b833cc73b1e6))
-  * remove Alipay donate link ([f42ed071](https://github.com/sparanoid/sparanoid.com/commit/f42ed0716dca40e47a0b2a64d94e99842f5b29dc))
-  * better variables structure ([af58b736](https://github.com/sparanoid/sparanoid.com/commit/af58b736e9dab2122519733e0020186819cc747a))
-  * remove all FlexSlider instances ([4124d6ad](https://github.com/sparanoid/sparanoid.com/commit/4124d6ada257a79114f22d88e92a62829cecccb1))
+## [4.3.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.3.1)
 
+### Bug Fixes
 
-#### Breaking Changes
+* Fix `.masthead` and `.page__footer` overlapping full screen video elements. [#933](https://github.com/mmistakes/minimal-mistakes/issues/933)
+* Correctly show Related Posts heading when UI Text data file is omitted and `related: true` in YAML Front Matter. [#901](https://github.com/mmistakes/minimal-mistakes/pull/901)
 
-* Now you can have custom CSS styles per post. Simply create a `css` front-matter data like this:
+## [4.3.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.3.0)
 
-```
-css: |
-  article header h1 img {
-    image-rendering: pixelated;
-  }
-```
- ([c5d3a185](https://github.com/sparanoid/sparanoid.com/commit/c5d3a18599fea23650496f1667ff49f6cbbab730))
+### Enhancements
 
+* Add workaround to allow theme gem's `/assets/js/main.min.js` file to be overridden by a local version. Simply add the following YAML Front Matter to the file:
 
-<a name="24.0.6"></a>
-### 24.0.6 (2014-04-27)
+  ```
+  ---
+  layout:
+  ---
+  ```
 
+  Any local customizations you make to `/assets/js/main.min.js` should now replace the theme gem's version.
 
-#### Bug Fixes
+## [4.2.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.2.2)
 
-* include the missing gem lock file ([2a546df9](https://github.com/sparanoid/sparanoid.com/commit/2a546df94bdeea1ead054ef653627fb9b92a4e2e))
-* **style:**
-  * avoid smoosh container edge ([75f66dfc](https://github.com/sparanoid/sparanoid.com/commit/75f66dfcfc60ef3e17f26c652a5e9e32006b835f))
-  * remove padding reset for last child elements ([62caf45f](https://github.com/sparanoid/sparanoid.com/commit/62caf45fc00132192694a9994a36ba168bf2cf1c))
+### Enhancements
 
+* Update [Greedy Navigation](https://github.com/lukejacksonn/GreedyNav) to flexbox version to make it more flexible when dealing with long site titles (`site.title`). [#836](https://github.com/mmistakes/minimal-mistakes/issues/836)
+* Adjust `box-shadow` in navigation and author sidebar. [#576](https://github.com/mmistakes/minimal-mistakes/pull/576)
+* Add Russian, Korean, and zh-TW localized UI text. [#815](https://github.com/mmistakes/minimal-mistakes/issues/815) [#834](https://github.com/mmistakes/minimal-mistakes/pull/834) [#838](https://github.com/mmistakes/minimal-mistakes/pull/838)
 
-#### Features
+### Bug Fixes
 
-* better external link post indicator ([6393ea07](https://github.com/sparanoid/sparanoid.com/commit/6393ea07d74672599b9cf7dd17ec5a3becb65174))
-* **style:** SVG headlines got viewport units support ([f818a7b1](https://github.com/sparanoid/sparanoid.com/commit/f818a7b1d626a4581c4a1d81df06d17d7c9b4dd1))
-* **template:**
-  * better inline SVG post title support ([6c33d1d6](https://github.com/sparanoid/sparanoid.com/commit/6c33d1d678d9a5228f160bae82be8748c966501a))
-  * inline SVG headline support ([89d3dac3](https://github.com/sparanoid/sparanoid.com/commit/89d3dac3413e11e5139cf8c96e2adc490d27ad9a))
-  * better Twitter Cards support ([39d5c5e9](https://github.com/sparanoid/sparanoid.com/commit/39d5c5e9670c9bedb32bff8f4c807eb156cc1f8f))
+* Fix Discourse embedded comments bug. [#823](https://github.com/mmistakes/minimal-mistakes/issues/823)
+* Fix `seo_author` default value in `seo.html` and add `author` meta. [#858](https://github.com/mmistakes/minimal-mistakes/pull/858)
 
+### Maintenance
 
-#### Breaking Changes
+* Add theme meta info to `_layouts/default.html` and `main.css`.
+* Update README.
+* Improve the pagination and taxonomy archive documentation. [#826](https://github.com/mmistakes/minimal-mistakes/pull/826)
+* Add comments to `/docs/_config.yml` to clarify use of YAML references. [#847](https://github.com/mmistakes/minimal-mistakes/pull/847)
 
-* Now I dynamically include headline SVG based on post front-matter data `svg-headline`:
+## [4.2.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.2.1)
 
-```
----
-title: Hello World!
-category: work
-svg-headline: svg/post-title.svg
-svg-headline-width: 400
-svg-headline-height: 145
----
-```
+### Enhancements
 
-Note:
+* Improve `paginator.html` to support paginated pages that live inside of a subfolder. See [documentation](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#home-page) for more details. [#764](https://github.com/mmistakes/minimal-mistakes/pull/764/)
 
-- The method to include SVG files has been changed since ([89d3dac341](https://github.com/sparanoid/sparanoid.com/commit/89d3dac3413e11e5139cf8c96e2adc490d27ad9a)), instead of embedding SVG into post files, now it include SVGs from external files using Liquid template tags `include`
-- I use `for` loop here to include SVG file, it doesn't mean you can define multiple SVG headers here, it's just a workaround since include files in a sub-directory with variable [seems buggy](https://github.com/jekyll/jekyll/pull/1495)
-- In most cases, you have to define `svg-headline-width` and `svg-headline-height` in order to make your SVG title responsive to your viewport.
- ([6c33d1d6](https://github.com/sparanoid/sparanoid.com/commit/6c33d1d678d9a5228f160bae82be8748c966501a))
+### Maintenance
 
+* Add `https` protocol to Google Universal Analytics embed. [#772](https://github.com/mmistakes/minimal-mistakes/pull/772)
 
-<a name="24.0.5"></a>
-### 24.0.5 (2014-04-01)
+## [4.2.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.2.0)
 
+### Enhancements
 
-#### Bug Fixes
+* Add `video` helper (for YouTube/Vimeo) and video headers to `single`, `archive`, and `splash` layouts. [#788](https://github.com/mmistakes/minimal-mistakes/pull/788)
+* Add missing simplified Chinese localized UI text strings. [#747](https://github.com/mmistakes/minimal-mistakes/pull/747)
+* Add Nepali (Nepalese) localized UI text strings. [#785](https://github.com/mmistakes/minimal-mistakes/pull/785)
+* Remove borders from table elements found in Google Custom Search Engine widget. [#759](https://github.com/mmistakes/minimal-mistakes/issues/759)
 
-* **post:** remove unwanted HTML comments for posts ([f5ffc0ee](https://github.com/sparanoid/sparanoid.com/commit/f5ffc0ee55a32cbcbd8710d36d65006a44ec95e2))
-* **style:** more aggressive “last-child” reset ([7b55093d](https://github.com/sparanoid/sparanoid.com/commit/7b55093d13e357a72d370b00db529424fba4fc27))
+### Bug Fixes
 
+* Remove `position: sticky` JavaScript polyfill and fallback to default positioning for browsers that don't support it. [#752](https://github.com/mmistakes/minimal-mistakes/issues/752)
 
-#### Features
+### Maintenance
 
-* **style:**
-  * remove unused `.btn` class ([600121ff](https://github.com/sparanoid/sparanoid.com/commit/600121ff0b16426c1898dbaf526b88c91c88e6fe))
-  * simplified transition ([3e8baa82](https://github.com/sparanoid/sparanoid.com/commit/3e8baa82165dae2542ee30fd2b49bfbda8ba1a6f))
-* **template:** add Redcarpet footnote support ([2c9d67f4](https://github.com/sparanoid/sparanoid.com/commit/2c9d67f439dbd17c2514475679d40ad515aaa895))
+* Fix invalid Google Universal Analytics example in documentation. [#783](https://github.com/mmistakes/minimal-mistakes/pull/783)
+* Bump `jekyll-sitemap` gem dependency to (1.0).
 
+## [4.1.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.1.1)
 
-#### Breaking Changes
+### Enhancements
 
-* New Redcarpet footnote will break existing footnote markup. Update your posts to avoid unwanted breaks.
+* Remove hardcoded `words_per_minute` "less than" and "minute read" values and make dynamic. [#703](https://github.com/mmistakes/minimal-mistakes/issues/703)
+* Update Font Awesome to `v4.7.0`. [#723](https://github.com/mmistakes/minimal-mistakes/issues/723), [#722](https://github.com/mmistakes/minimal-mistakes/issues/722)
+* Add support for YouTube channel URLs in author profile. [#716](https://github.com/mmistakes/minimal-mistakes/issues/716)
 
-You can read more about the footnote syntax at https://github.com/vmg/redcarpet
- ([2c9d67f4](https://github.com/sparanoid/sparanoid.com/commit/2c9d67f439dbd17c2514475679d40ad515aaa895))
+### Bug Fixes
 
+* Add Jekyll as `spec.add_runtime_dependency` in `.gemspec`.
 
-<a name="24.0.4"></a>
-### 24.0.4 (2014-04-01)
+## [4.1.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.1.0)
 
+### Enhancements
 
-#### Bug Fixes
+* Add Jekyll include for adding [custom author profile links](https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/author-profile-custom-links.html) to sidebar
 
-* **style:**
-  * fix code block overflow scroll issue ([33be40d1](https://github.com/sparanoid/sparanoid.com/commit/33be40d1196fa42331bbba91cd32725a098695b8))
-  * fix mismatched color variables ([865c13d6](https://github.com/sparanoid/sparanoid.com/commit/865c13d6c73f89a8ecabf50666c8391c42241aef))
-  * clear float for `blockquote` footer ([1da7cf28](https://github.com/sparanoid/sparanoid.com/commit/1da7cf286d140a7e9076a3c6deec207f4f91dcc1))
-* **template:** wrong home link hover effect for specified post color scheme ([9bbca0f7](https://github.com/sparanoid/sparanoid.com/commit/9bbca0f7b630bd8ee118f5433319a6256fb61b25))
+### Bug Fixes
 
+* Fix link to Discourse.org homepage in `noscript` section [#699](https://github.com/mmistakes/minimal-mistakes/pull/699)
+* Fix padding issue with pagination buttons [#694](https://github.com/mmistakes/minimal-mistakes/issues/694)
 
-#### Features
+## [4.0.10](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.0.10)
 
-* better Redcarpet configurations, add some useful Redcarpet extensions ([2bd1c2a1](https://github.com/sparanoid/sparanoid.com/commit/2bd1c2a1c603dcbb686d55b6607989187f9326a1))
-* use `rsrc.sparanoid.com` for assets URL ([445257d3](https://github.com/sparanoid/sparanoid.com/commit/445257d3a0898f40118e1563612f474fc2d83f35))
-* **style:**
-  * add a simple table style ([7b01cf56](https://github.com/sparanoid/sparanoid.com/commit/7b01cf56a56d369f00dd0cd03681a795233e6fb9))
-  * add syntax highlight support ([006e14f1](https://github.com/sparanoid/sparanoid.com/commit/006e14f1d9ca04260c6d519ef737f203bf1cdd2e))
-  * smaller margin space for image post title ([4eac0fda](https://github.com/sparanoid/sparanoid.com/commit/4eac0fdab6adcd68ddaf40451dd22dc034c83c07))
-* **template:**
-  * remove `.txt` wrapper ([1f400475](https://github.com/sparanoid/sparanoid.com/commit/1f400475e3f3611919299fdcccad73779539fd16))
-  * update footer and read me for new jksf (a.k.a. Almace Scaffolding) branding ([13de5820](https://github.com/sparanoid/sparanoid.com/commit/13de58207961f52204545bf9ac91a03bb5f0bdf5))
+### Bug Fixes
 
+* Add Staticman default `path`. [#683](https://github.com/mmistakes/minimal-mistakes/issues/683)
 
-#### Breaking Changes
+### Maintenance
 
-* Removal of `.txt` CSS class may break your existing post layout. Now `.txt` is replaced with `main.content`, a global content wrapper. To fix layout breaks for your existing site: simply remove all `<div class="txt">` containers from your posts
- ([1f400475](https://github.com/sparanoid/sparanoid.com/commit/1f400475e3f3611919299fdcccad73779539fd16))
+* Slight correction/improvements to French UI text. [#685](https://github.com/mmistakes/minimal-mistakes/pull/685)
 
+## [4.0.9](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.0.9)
 
-<a name="24.0.3"></a>
-### 24.0.3 (2014-03-31)
+### Bug Fixes
 
+* Fix overlapping sidebar navigation lists due to `max-height: 100vh`. [#668](https://github.com/mmistakes/minimal-mistakes/issues/668)
 
-#### Features
+## [4.0.8](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.0.8)
 
-* add a fancy banner at the bottom of every page ([0760b036](https://github.com/sparanoid/sparanoid.com/commit/0760b036cb1d6daf2d900f9f203802cd0840ded8))
-* **Gruntfile:**
-  * add a fancy `time-grunt` plugin ([ab1c2822](https://github.com/sparanoid/sparanoid.com/commit/ab1c2822ca6022e6dcbacd3337f1b1fb5b49b32b))
-  * new HTML smoosher task ([9d4dcb25](https://github.com/sparanoid/sparanoid.com/commit/9d4dcb25ee6c94da76945f151f0bc7385454a701))
-* **package:** introduce grunt-conventional-changelog ([c732236b](https://github.com/sparanoid/sparanoid.com/commit/c732236b0d75c40c95a556ff67a504ebbf8435a4))
-* **post:**
-  * update “Kai Series” color scheme ([3457b2a8](https://github.com/sparanoid/sparanoid.com/commit/3457b2a80b85364d5d0dba3dd0b85242a2f085bc))
-  * update post “ReadWise” ([5195c1e1](https://github.com/sparanoid/sparanoid.com/commit/5195c1e160a1a54e4e0cca933454d1d05235e6eb))
-* **template:**
-  * remove SVG icons ([860f6b4b](https://github.com/sparanoid/sparanoid.com/commit/860f6b4bf85671628b9329ecd6a074a5d37447b7))
-  * try `minimal-ui` for iOS 7.1+ ([0215e148](https://github.com/sparanoid/sparanoid.com/commit/0215e148837ecf2ce701ee4da7af950fe76635eb))
+### Bug Fixes
 
+* Set default value for `words_per_minute`. [#657](https://github.com/mmistakes/minimal-mistakes/issues/657)
+* Adjust sidebar navigation list CSS so it collapses at the correct width.
 
-#### Breaking Changes
+### Maintenance
 
-* This will remove all SVG icon decorations for `.note`, `.store`, and `.download`
- ([860f6b4b](https://github.com/sparanoid/sparanoid.com/commit/860f6b4bf85671628b9329ecd6a074a5d37447b7))
-* `smoosher` task will inline all `.css` and .js` files to reduce HTTP requests and increase load performance. It's ideal for small website with some basic styles just like this project.
- ([9d4dcb25](https://github.com/sparanoid/sparanoid.com/commit/9d4dcb25ee6c94da76945f151f0bc7385454a701))
+* Add Google AdSense banner to `/docs/_layouts/default.html` for demo site.
 
+## [4.0.7](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.0.7)
 
-### 24.0.0 (Jan 28, 2014)
-- Bump deps version
-- Readme badges update
-- Remove Grunt badge
-- Add a Bitdeli Badge to README
-- Remove duplicated badge
-- Update copyright date
-- Use variables instead of hand-coded strings
-- Gitkeep for img folder
-- More variable fix
-- Remove quotes
-- Add codename
-- Update robot.txt
-- Remove unused post excerpt
-- Add new post “Moonstruck Princess Extended”
-- Correct margin right space
-- Smaller block quote decoration for mobile devices
-- Use src-dest format
-- Simplified grunt task
-- Update license year
-- Fix typo, props @gordianz
-- Draft folder, more info: https://jekyllrb.com/docs/drafts/
-- Switch to Jekyll default markdown template
-- Split main template into multiple partials
-- `list-item.html` -> `page-item.html`
-- Move custom variables into `_data`, more info: https://jekyllrb.com/docs/datafiles/
-- `_source` -> `_app`
-- Fix variable condition
-- Better nav solution is here
-- Site main style update
-  - New header
-  - New logo (favicon, etc.)
-  - New color scheme
-  - Typography minor tweak (Now sans-serif FTW)
-- Add full width banner back
+### Enhancements
 
-### 23.0.1 (Dec 14, 2013)
-- Uses autoprefixer
-- Update server task
-- Update `usemin`
-- Bump Flexslider version
-- Store page minor update
-- Fix line-height since refactor
-- Update `archive` grunt
-- Update changelog
-- Add `cite` for blockquotes, more info see https://html5doctor.com/cite-and-blockquote-reloaded/
-- Increase feed post limit
-- Adds setup instructions
-- Update post “Delicious.com”
-- Bump cssmin version
-- Adds icon set image for post “Delicious.com”
-- Fix “Delicious.com” title wrapper on small devices
-- Add hyphens support for headings
-- Fix logo position
-- Strip HTML in title section for Atom feed
-- Update post “Tianjin Project Revision”
-- Fix error page blur issue on retina display
-- Bump dep version
-- Update post “Tianjin Project Revision”
-- Bump grunt version
-- Update first post date
-- Add a funny interrobang symbol
-- Bump deps version
-- Bump version, prepared for Assemble rework
+* Add `!default` values to **\_sass/\_variables.scss**.
+* Collapse sidebar navigation lists on smaller screens. [#607](https://github.com/mmistakes/minimal-mistakes/issues/607)
 
-### 23.0.0 (Oct 27, 2013) [#][23.0.0]
-- Shorter hash filename
-- Fixes *min and usemin tasks order
-- Remove `-webkit-backface-visibility: hidden;`, doesn't compatible with `position: sticky;`
-- Bump deps version
-- Update post color scheme for “DOLLARS Chat Room”
-- Better external link (link post) handle
-- Adds quote marks for href links
-- Middot style fix
-- New (brighter) assets for IterCast
-- Update font stack
-- Remove appcache support, too buggy
-- Remove custom font face
-- Sub heading transition
-- Update todo
-- Update heading on mobile device
-- Update upcoming post
-- Retrieve old content from Time Machine
-- Larger wrapper width
+### Bug Fixes
 
-### 22.0.7 (Sep 17, 2013)
+* Rename `#comments` to something more unique to avoid clashes with Kramdown generated headline IDs. [#582](https://github.com/mmistakes/minimal-mistakes/issues/582)
 
-- Bump deps version
-- Uses post thumb instead of img-headline
-- Fixes typo
-- Uppercased post title “Relative URL”
-- Update deps order
-- I LOVE UNIVERSAL SELECTORS
-- Bump reps version
-- Adds manifest grunt task
-- More aggressive cache config
-- Adds `<html>` head
-- Fixes grunt-manifest versioning
-- Rename apache manifest
-- Rename CSS filename
-- Feature: Appcache support
-- Adds usemin task
-- Remove unused dep
-- Remove debug task config
-- Reorder grunt tasks
-- Feature: Assets revving
-- Fixes compiling order
-- Updates Jekyll exclude list
-- Scalable file path
+### Maintenance
 
-### 22.0.6 (Aug 9, 2013)
+* Reorganize SCSS partials in **assets/css/main.scss**
 
-- Fix link in changelog
-- Fix the link points to the real location in changelog
-- `Mac OS X` --> `OS X`
-- Disable Champaign Monitor custom domain URL
-- CSS-style variables for Less
-- Bump deps versions
-- Update license
-- Simplified homepage copywirting
-- Update homepage again
-- Bump required deps
-- Update remote hostname for Grunt deploy task
-- Adds some comments to Grunt tasks
-- More comment for Jekyll configuration file
-- Build future posts for dev env
-- Adds color scheme style
-- Update and add color scheme for some posts
-- Adds page.link for post with `page.img-headline`
-- Better post syntax
-- Simplified `.txt` paragraph style
-- Update post syntax in notes
-- Move post under work to its sub-categories
-- Update railgun post background color
-- Fixes typo
-- Adds new post “IterCast”
-- Adds space hack back
-- Fixes inline CSS in html not compressed bug
-- Fixes icons not filled with specific color scheme on some posts
-- Update todo list
-- Remove unused vars
-- Give some love to my old posts
-- Remove `::-webkit-validation-bubble` support: https://code.google.com/p/chromium/issues/detail?id=259050
-- Update link color for post “IterCast”
-- Disable HTML post compress for inline CSS, it kills normal paragraph spaces too
+## [4.0.6](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.0.6)
 
-### 22.0.5 (Jul 1, 2013)
+### Enhancements
 
-- Fix about page indents
-- Remove theme previews from Postholic
-- Adds post “7-Zip Chinese Simplified”
-- License --> Licenses
-- Adds new post “Notational Velocity”
-- Updates todo
-- Fix `grunt log` task
+* Add [`figure` helper](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#figure) to make generating a `<figure>` element with a single image and caption easier. [#572](https://github.com/mmistakes/minimal-mistakes/pull/572)
+* Add structured data markup for `itemprop="person"` in author profile sidebar. [#647](https://github.com/mmistakes/minimal-mistakes/pull/647)
 
-### 22.0.4 (Jun 26, 2013)
+### Bug Fixes
 
-- Fix Gruntfile error
-- Update packages
-- Update homepage copywriting
-- Fix tab indents
-- Changelog: tab indents to space indents
-- Update copywriting for homepage and about page
+* Fix improper YAML formatting of some locales. [#651](https://github.com/mmistakes/minimal-mistakes/pull/651)
 
-### 22.0.3 (Jun 26, 2013)
+### Maintenance
 
-- license -> licenses
-- Update .tm_properties
-- Remove `feed.atom` -> `feed-atom.xml`
-- Fix tab indents
-- Changelog: tab indents to space indents
-- Update copywriting for homepage and about page
+* Clarify "migrating to gem-theme" instructions in **Quick Start Guide**.
+* Add `rake preview` task for testing `/test` during theme development.
 
-### 22.0.2 (Jun 22, 2013)
+## [4.0.5](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.0.5)
 
-- Update changelog
-- Use dev deps badege
-- Update dev deps badge
-- Better post title line height
-- Add new post “Start Page”
-- Remove CSS *margin hack*, `time` elements shouldn’t be colapsed since it’s an inline element.
-- More info: https://github.com/kangax/html-minifier/pull/67
-- So you should wait html-minifier to fix that.
-- No more codename
-- No more `core.assets` variable
-- Update readme
-- Update grunt-concurrent, better log handling
-- Update readme
-- Optimize template structure, better central style, many more fixes
-- Update changelog, bump version to 22.0.2
+### Enhancements
 
-### 22.0.1 (Jun 13, 2013)
+* Update gems: `jekyll-sitemap` (0.12), `jekyll-feed` (0.8).
+* Improve next/previous pager links visibility by changing gray color to blue (`$link-color`).
 
-- More info for post “DOLLARS Chat Room”
-- Fix version number in readme
-- Update grunt-contrib-less to v0.6.0
-- Yay my .less is already 1.4.0 compatible.
-- Update enviroment requirement
-- Updat Gruntfile
-  - Fix cssmin task working directory
-  - Better concurrent task ouput
-  - Optimize concurrent order
-- Update Jekyll settings
-- Remove unused comments in Gruntfile
-- Update `.™_properties` indent
-- Re-init `package.json`
-- Change gallery image order for post “Antiskill, Judgment Screensaver”
-- Use my awsome version number
-- New grunt task `log` - List current git commit log using `grunt log`
-- Reserve back to original version number, bump version to 22.0.1
+### Bug Fixes
 
-## 22.0.0 (Jun 13, 2013) [#][22.0.0]
+* Fix `.sidebar` flicker/jump when hovered. [#583](https://github.com/mmistakes/minimal-mistakes/issues/583)
 
-- Move all element to align left
-- Better Textmate exclude list
-- Better work list
-  - Remove image thumbnals, the same as Note page
-  - No more `.width-unfixed` class for normal pages
-- Shorten some post tiles
-- Update posts structures for new design
-  - Move Path Menu post from Note to Work
-  - Add relative links for some posts in Work category
-- Make it compatible with less 1.4 beta or greater
-- Revert adding more margin space for `.tweet` button
-- More details about post “ReadWise”
-- “Latest Work” --> “Latest”
-- Better copywriting
-- No more `lazyload.html` for Work page
-- Add my favorite titles back
-- Better body padding for small screens
-- Remove `.center` class, no longer need
-- More multiple language titles
-- Shorten Work page subtitle
-- Fix typos
-- Better template structure
-- Simplify post title “find.ac Alter”
-- No more `hgroup`, use `header + h1 + small`
-- More structure fix, valid for w3c check
-- Remove sponsor styles and HTML code
-- Add a simple animation for latest work link
-- Better post title image for new design
-- Create new post “DOLLARS Chat Room”
-- Simplify Atom feed structure, no more `post.thumb` determination
-- Better navigation styles for small devices
-- Add excludeInFileChooser for `.tm_properties`
-- Update changelog
-- Bump version 21-finale --> 22
-- Update changelog
-- Better Grunt server task with more Jekyll options support
-- Fix buid task, create a new task `grunt archive` to create old design archive
-- Update codename
-
-## 21-finale (Jun 7, 2013) [#][21-finale]
-
-- Hide img `alt`
-- Update post 'Project Railgun'
-- Add posts for newly released plugins.
-- Update old post with 'img-headline'.
-- Add `.reflist`, `.ref`, `.cite` for reference links in post
-- Update post 'Tianjin Project'
-- Update header for post 'Corner Bracket Lover'
-- Add 'thumb' images for hidden posts from category 'Work'. The thumbnails I defined are mainly used by Twitter Cards meta
-- Update posts for newly released plugins / theme
-- Simplified Gemfile
-- Better configuration for switching image assets URL
-- Better file structure, fix empty space when a paragraph starts with some asian punctuation marks
-- Add `:preview` task, experimental
-- Better configuration file to control availability
-- Update `::selection` style
-- TL;DR
-- Reset availability
-- Remove `.work-list` in single post, update post navigation
-- Simplify post navigation
-- Retire accesskey
-- Update browser style
-- Remove useless posts
-- Update post tag, remove some useless posts
-- Add side projects section
-- Make `twitter:description` a little bit longer than 200 letters, Twitter can handle it very well.
-- Better template logic, minor tweaks
-- Simplify template tags
-- Upgrade Lazyload by @vvo to 1.0.0
-- Use internal links instead of hardcoded links, read more about this specification at https://github.com/mojombo/jekyll/pull/369
-- Update Jekyll to 0.12.0
-- Add more description about default deploy task
-- Initialize Lazyload as soon as it loads. props @vvo
-- New post 'A List Apart 5.0'
-- Add 'Donate' page
-- Update text description for donate links
-- Add exclude search list for Textmate
-- Fix `site.url` for Twitter share button
-- Update Jekyll to 0.12.1
-- `info@sparanoid.com` -> `t@sparanoid.com`
-- Remove post navigation
-- newsletter.sparanoid.com instead of sparanoid.createsend.com
-- Remove WebKit filter effect, not well supported on Retina Display
-- Adds WebKit filter effect back
-- Adds `.webkit-fix` hack to gain some performance and fix burry image using `-webkit-filter` on MacBook Pro with Retina display
-- Remove `.webkit-fix` on body tag
-- Remove unused post navigation CSS
-- Adds.txt definition for 'Note' page
-- Adds `.webkit-fix` for `:root`
-- Updates `.index` background color for post 'Kai Series'
-- Updates `Rakefile` with new path
-- Adds new post ‘Kai Series’
-- Compatible with Jekyll 1.*:
-- Using directory-specified path for `post_url`
-- Better configuration structure.
-- Updates gitignore (`codekit-config.json` removed since it's no longer serving me)
-- Remove support for `--file` flag
-- Adds CONTRIBUTING.md and CHANGELOG.md
-- Using the following command to update changelog: `git log 21..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'`
-- Better changelog style
-- Adds release date to changelog
-- Updates changelog with generation instructions
-- Fix changelog tab indent
-- No more `tmp.txt` generated from changelog generator command
-- Adds ATTRIBUTION.md based on teach.github.com
-- Simplifies license in readme
-- Updates `.gitignore`, remove logs from repo
-- Better rake build script for handling image assets URL
-- Update changelog with more accurate date and versions
-- Better base URL handling
-- Adds donate variable for Donate page
-- Adds `a.css` back to repo
-- Updates Jekyll version to 1.0.2
-- Block old version archive
-- Better post logo size with style `scoped` support
-- Fix feed validation
-- Remove `feed.rss`
-- Add configuration comment
-- Fix typos in `CHANGELOG.md`
-- Fix typo in `_config.yml`
-- Recompile CSS
-- Update changelog with demo links
-- Update changelog with old version screenshots
-- Update changelog date
-- Fix screenshots URLs in changelog
-- Fix dead link in old post
-- Fix  permission
-- Adds package.json
-- Add Grunt support, now use `grunt [task]` to manage server, build tasks
-- Change source to 'https://rubygems.org' for secure HTTPS connection
-- Add Travis support
-- Add Travis and David badges
-- Remove Gemfile.lock
-- Remove unused grunt dependencies
-- Remove old `rake serve` task, use jekyll itself
-- Remode deprecated task :preview
-- Read basic configurations from YAML
-- Copy rake tasks to Gruntfile
-- Move more rake tasks to Gruntfile
-- Say goodbye to Rakefile
-- Move scoped style into proper scope
-- Add scoped style fallback
-- Better less style with recess check
-- More less properties order fix
-
-
-## 21 (December 10, 2012)
-
-- New header design
-- Better comments
-- Increase nav menu links spacing, since we've compressed and removed white spaces for HTML output. we need to add more space between links. More info: https://stackoverflow.com/questions/588356/
-- Wrap all width-sensitive elements into `.wrapper`, prepared for the upcoming header
-- Simplify deploy script
-- Update project name
-- Add special header for homepage
-- Better arrow hover color
-- Better header background gradient
-- Better template indent
-- Larger header post title
-- Add font family variable
-- Try ORCA CDN created by @livid
-- Unfix header height
-- Add FlexSlider for some interactive posts
-- Update pagination position
-- Add comments for better understanding. Updated Twitter Cards code
-- Better header condition
-- Better comments
-- Add HTML5 form validation support
-- Change subscription pages to category 'store'
-- Bump copyright year
-- Better CSS selector performance
-- Update some posts thumbnails
-- Add a `-webkit-filter` effect for `.work-list`
-- Add some narrow typefaces fallback
-- FlexSlider: `pauseOnHover: true`
-- Fix `.paginaton` padding
-- Add custom Jekyll support
-
-## 20.1-finale (November 27, 2012) [#][20.1-finale]
-
-- Simplified feed templates
-- Uses `background-color` in transition statement to avoid animation effect on logo
-- Add `role=announcement`
-- Simplified `.gitignore` file
-- Fixed typo, props @disinfeqt
-- `lang="zh"` -> `lang="zh"`
-- More specified Rakefile comment
-- Update post WordPress Plugin - Quotmarks Replacer, better blockquote styles
-- Better tweet button position
-- Merge posts
-- Tabs -> spaces
-- Remote post contents on page Note
-- Shortened post URL and title 'Lester’s Plugins in Chinese'
-- Single quotes -> double quotes
-- Update post 'Lester’s Plugins in Chinese'
-- Add new post '3.1 Billion in a Day'
-- Add Twitter Card support
-- Update logo
-- Remove useless CSS define
-- Add image lazy load support, more info at https://github.com/vvo/lazyload
-- Use nginx empty gif module instead of data URI to small generated HTML size, read more info about nginx empty gif module: https://wiki.nginx.org/HttpEmptyGifModule
-- `∞` (&#8734) -> `▲` (&#9650)
-
-## 20.1 (October 7, 2012) [#][20.1]
-
-- Convert Chinese posts to English
-- Update post 'Tianjin Project'
-- Update `.work-list` appearance
-- Fix work-list on iPhone landscape
-- Update post thumbnails
-- Update post 'Font Zomnk'
-- Update About page with microdata
-- Fix typo
-- Add `.store` style, embed SVG w/ data URI in Less
-- Added a workaround solution for yuicompressor bug, media query fix
-- Remove lang variable. More post in English. Better hr styles with data attr.
-- Fix `feed-all.rss` permalink
-- Update ads code
-- Update post 'Antiskill, Judgment Screensaver / Icon'
-- `Rakefile` playing with YUICompressor
-- Update post thumbnails style for works
-- Update font, Add new post 'Tianjin Project × The World Economic Forum'
-- Update post pubdate for 'Tianjin Project × The World Economic Forum'
-- Update post 'Tianjin Project × The World Economic Forum'
-- Update post thumbnail size in feed
-- Better font size
-- Update pagination position
-- Add new post 'Safari 6 Loads Page Faster'
-- Update clearfix method: https://nicolasgallagher.com/micro-clearfix-hack/
-- Update comment for clearfix hack
-- Simplified CSS and HTML code
-- Inverted color for Error page
-- Add tweet button, variables updated
-- No more WOTY series
-- Update decoration border, global body padding updated
-- `apple-touch-icon` -> `apple-touch-icon-precomposed`
-- HR description position update
-- Update apple-touch-icon (precomposed)
-- Update media query description
-- Better media query, `.tweet` -> `.btn`
-- Reset "New page: Work List"
-- Add `site.url` variable.
-- Added subscription page and form
-- sparanoid.createsend.com -> newsletter.sparanoid.com
-- Update newsletter server URL `newsletter.sparanoid.com` -> `sparanoid.createsend.com` again for SSL support.
-- Update post Tianjin Project series
-- Update post Lucky Star Skin for QQ / Sogou Pinyin IME
-- This is an elements centered version, with the following verbose changes:
-- All elements are centered.
-- Simpler page navigation
-- Shorter post title for some articles, make them look better on small screen
-- Simplified iOS media query
-- Adds media query to detect different screen resolution for `.work-list`
-- Adds freelance status on homepage
-- Uses `site.profile.email` variable on About page
-- Adds `feed-note.atom` and `feed-work.atom` (Temporary)
-- Update `.btn` styles
-
-## 20 (July 16, 2012) [#][20]
-
-- First commit prepared for v20
-- Remove comments in Less, `.work-list` minor tweak, remove text-align hook in error page
-- Remove WOTY specified styles and structures
-- Font updated, index updated, colophon updated, pagination position updated, infinite symbol position updated
-- Update logo size
-- Bump version to 20
-- Remove leftover font
-- Post minor changes
-- Remove charset meta tag
-- Update pagination position, again
-- Fix typo, props @lianghai
-- No more `.woty` class for this version
-- Update `README.md`
-- Add slide effect on navigation
-- Fix `display: inline-block` parsing error in Firefox for navigation
-- Fix pagination position, probably the last time I fix it.
-- Rewind to Safari compatible navigation, ignore Firefox users
-- An experiment rotate menu layout
-- An experiment mouseover menu layout
-- Remove unused mixins
-- Add `text-align` workaround for post with Chinese, props @lianghai
-- Fix typo, props @GordianZ
-- Better menu transition effect
-- Better HTML output, just looks better
-- Fix pagination position, oh...
-- HTML markup update
-- Media query, iOS ready
-- Logo and text pixel perfection, props @vaia
-- Add `HTML compressor.rb` by @mytharcher
-- Removed `HTML compressor.rg` by @mytharcher. Use the easier way: `htmlcompressor.jar` and `yuicompressor.jar` in `Rakefile` for minify HTML output code, this can provide pretty HTML code for development and serve minified version for production. sweet.
-- Remove useless HTML comment
-- Arrange posts in category folder, fixed wrong post URL
-- Update post "lindsay-koinaka 3.0"
-- Fix navigation in error page
-- Add `.browser` style for website post display
-- Better title position
-- Category update: add Design and Drawing tag for posts in category Work. more style changes for work list and `.browser` frame
-- Update post thumbnails
-- New post 'Big Typography Dynasty'
-- Add `Rakefile` to repo, finally
-- Remove deprecated tasks
-- Update thumbnails size for Work posts
-- Update `.gitignore`
-- Add screenshot for Tianjin Project
-- Update thumbnails size for Work posts, again
-- Add current page style for iOS, update pagination position
-- "Update thumbnails size for Work posts, again", again
-- Add `&#20;` for `htmlcompressor.jar`
-- Fix `.work-list` for post
-- Better title position
-- Add section header for post 'Tianjin Project'
-- Major changes for box models
-- Clean up CSS
-- Compress feeds
-- Update h3 margin
-- Remove whitespaces
-- Add byline for Google Authorship, more information at https://support.google.com/webmasters/bin/answer.py?hl=en&answer=1408986
-- Update complier path
-- Update codename, bump to (real) version 20
-
-## 19.3-finale (June 28, 2012) [#][19.3-finale]
-
-- Better pagination for Note section with post title
-- Remove bottom gradient
-- Add `.download` and `.note` icons
-- Better svg height for Safari and iOS Safari
-- Another icon position fix when download and note blocks are used at the same time
-- Update post 'SlimBox & VoxGrowl'
-- Update post '7-Zip Iconset Redesigned (Version 2)'
-- Better font stacks order
-- Add new post series: Word of the Year (WOTY)
-- Remove white spaces and other jam
-- Unified excerpts for posts. Update Atom feed structure.
-- Update permalink symbol for Note
-- Update page 'About'
-- Color variables ready, invert version reader
-- Ready for invert
-- Add new post 'I Don’t “Get” Art'
-- Better Atom feed structure, passed feed validation by w3.org
-- Update feed structure
-- Remove Safari preview hack, since there's a cool type here.
-- Fix Atom feed, again
-- Fix HTML entries
-- Fix quote marks
-- Update my great Error 404 page
-- RSS feed minor change
-- Better font styles handling / Add blockquote
-- Add some old posts
-- Update dead link for old post
-- Add old artwork posts / Update quote marks
-- Update post thumbs
-- Update hover background color in image list in "work"
-- Update HTML structure, Simplified link border-bottom logic
-- Add old post 'iGoogle Theme - Somilody 2'
-- Update page 'Note' structure
-- Decrease `.download` and `.note` font-size
-- Update pseudo classes for `.work-list`
-- Update media query for better UX for iPhone users. Add @space variable to take care of all spaces.
-- Darker blockquote symbol
-- Simplify media query syntax
-- Replace `.a` with `role^=current`
-- `role=current-page` -> `role=current`
-- Add new post "“Free” Dribbble Invite"
-- Update Word of the Year titles
-- Refine CSS classes, remove unused styles, many minor fixes
-
-## 19.3 (June 13, 2012) [#][19.3]
-
-- More logo staff
-- Still more logo staff
-- Remove logo animation
-- No more `<body>`
-- Remove duplicates
-- Update logo
-- Update thumbnails style
-- Better `line-height` control
-- Change feeds URLs
-- Remove experimental staff
-- Update post 'Moonstruck Princess'
-- Add new post 'Tianjin Project'
-- Change `.txt` width
-- Update logo
-- Update assets filename / Better CSS naming for assets / Clean up CSS
-- Larger title
-- Update pagination position for new larger title
-- Fix pagination position on the iPhone
-- Fix hgroup width
-- Better styles order
-- Make `.txt` `max-width` variable
-- Add placeholder background for images in work list
-
-## 19.2 (April 18, 2012) [#][19.2]
-
-- Remove ajaxify-html
-- Add old posts
-- Better title `line-height`
-- Better typesetting for email address on mobile (small screen) device
-- Anti SOPA
-- Update CSS structure
-- Update doctype
-- Update link in post 'PaintStop Chinese Simplified for ZBrush 3.1 [Unofficial]'
-- Make copyright year automatically update
-- Update list decoration
-- Clean `.gitignore`
-- Configuration cleaned, typo fixed
-- Remove `humans.txt`
-- Simplified `_config.yml`
-- Add assistive text to RSS 1.0
-- Fix RSS 1.0 validating error
-- `/feed/rss.xml` -> `/rss/index.xml`
-- Modify Safari preview page
-- Change words for post 'WordPress Plugin - Quotmarks Replacer'
-- Update license
-- Update logo
-
-## 19.1 (January 13, 2012) [#][19.1]
-
-- Logo updated
-- Fix GitHub repo URL
-- Add top transparent bar
-- Add pagination
-- Update ignore files
-- Better top bar
-- Update error page
-- Update navigation padding
-- Remove empty space
-- Add translucent gradient at the bottom of the page
-- Add navigator for category Work
-- Better CSS logic
-- Compressed `apple-touch-icon.png`
-- Only use link when it's a external URL
-- Removed useless vendor-free CSS styles
-- Update post 'Path Menu Using CSS'
-- Better feed output for posts with external links
-- Add Store page, I'm going to sell cool things here
-- Fix grammar for post 'Path Menu Using CSS'
-- Add an arrow for external links in post page
-- Update color scheme
-- Remove leftovers
-- Darker title
-- Compressed CSS with YUI compressor
-- Update CSS author comment
-- Update favicon
-- Remove useless space
-- Better line-height for ad.
-- Update code / pre color
-- Add WebFont Loader by Google
-- Manually rolled back to original font-face version
-- Remove legacy font-face supports
-- Better footer position
-- Add Ajaxify with `histroy.js` and `ajaxify-html5.js`
-- Remove fade effect, load script on demand
-- Update ajaxify
-- Remove fade effect again
-
-## 19 (December 12, 2011) [#][19]
-
-- Upgrade to ver. 19, codename lindsayisgod
-
-## 18-finale (December 9, 2011) [#][18-finale]
-
-- REMOVE `</script>` fix for Jekyll
-- UPDATE font-family in image list
-- UPDATE link border color
-- UPDATE text block gradient
-- UPDATE print and iPhone style
-- UPDATE logo
-- ADD `text-rendering`
-- UPDATE about page
-- UPDATE error page
-- FIX HTML markup minor changes
-- REMOVE Yoggrt ads scripts
-- UPDATE image hover `background-color`
-- ADD justified text-align and hyphens for post contents
-- POST remove umbrella
-- UPDATE post list styles
-- POST add 'Path Menu Using CSS'
-- FIX double slashes when a external link is defined in post.html
-- Update logo
-- Add BSA ads
-
-## 18 (October 16, 2011) [#][18]
-
-- ADD v18 mockup
-- REMOVE pagination for category NOTE
-- UPDATE thumbnail images styles
-- ADD media query for iOS
-- UPDATE navigation
-- UPDATE `README.md`
-- UPDATE Atom feed
-- POST remove 'Nessa'
-- REMOVE styles for atom feed
-- ADD RSS feed for exporting to WordPress
-- UPDATE `a:hover` style
-- ADD transition for `a:hover` style
-- UPDATE font-family
-- UPDATE always show ads
-- RENAME `rss.xml` -> `index.rss.xml`
-- REMOVE category for RSS output, cause WordPress creates dummy categories.
-- UPDATE pages
-- UPDATE styles for v18
-
-## 17-finale (October 1, 2011)
-
-- REMOVE dead GitHub links
-- POST minor changes
-- FIX Jekyll parsing error
-- REMOVE Rakefile
-- UPDATE paginator
-
-## 17 (2011) [#][17]
-
-- BUMP version to 17 from old repo
-
-## 16 (2011) [#][16]
-
-- BUMP version to 16 from old repo
-
-## 15 (2011) [#][15]
-
-- BUMP version to 15 from old repo
-
-## 14-finale (September 7, 2011)
-
-- ADD fonts back due to the lack support of Firefox
-- ADD new webkit gradient style
-- UPDATE font files to CloudFront
-- UPDATE prepared for upcoming version
-- UPDATE URL for easy development
-
-## 14.1 (February 11, 2011)
-
-- UPDATE file structures
-- FIX navigation in index
-- UPDATE HTML structure and CSS cleanup
-- UPDATE index display settings
-- UPDATE Atom output
-- UPDATE CloudFront files URL
-- ADD error 404 page
-- UPDATE assets files URL
-- UPDATE host font files elsewhere
-- UPDATE error page
-
-## 14 (February 8, 2011) [#][14]
-
-- UPDATE readme and license
-- CREATE auto update script, inspired by https://github.com/henrik/henrik.nyh.se
-- FIX datetime valid XML schema
-- UPDATE deploy settings
-- UPDATE site navigation
-- UPDATE merge colors value to the same places
-- FIX minor color fixed in nav
-- UPDATE no more dark styles, CSS cleanup
-- ADD current nav style
-- FIX media query bug processed by YUI Compressor
-- UPDATE footer DELETE redundant white spaces
-- UPDATE deploy settings
-- UPDATE page navigation
-- UPDATE page navigation, transition cleanup
-- UPDATE nav transition effect, HTML markup cleanup
-- DELETE fade effect on page navigation
-- UPDATE page navigation font size and paddings
-- UPDATE decoration position
-- UPDATE no more fluid position
-- UPDATE deploy settings
-- UPDATE codes cleanup and some minor changes
-
-## 13 (2008 - March 2010)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/13/13-01.jpg)
-- [Screenshot #02](https://sparanoid.com/lab/version/13/13-02.jpg)
-- [Screenshot #03](https://sparanoid.com/lab/version/13/13-03.jpg)
-- [Screenshot #04](https://sparanoid.com/lab/version/13/13-04.jpg)
-- [Screenshot #05](https://sparanoid.com/lab/version/13/13-05.jpg)
-- [Screenshot #06](https://sparanoid.com/lab/version/13/13-06.jpg)
-- [Screenshot #07](https://sparanoid.com/lab/version/13/13-07.jpg)
-- [Screenshot #08](https://sparanoid.com/lab/version/13/13-08.jpg)
-
-## 12 (2007 - 2008)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/12/12-01.jpg)
-- [Screenshot #02](https://sparanoid.com/lab/version/12/12-02.jpg)
-- [Screenshot #03](https://sparanoid.com/lab/version/12/12-03.jpg)
-- [Screenshot #04](https://sparanoid.com/lab/version/12/12-04.jpg)
-
-## 11
-
-Source code not available
-
-## 10
-
-Source code not available
-
-## 09
-
-Source code not available
-
-## 08 (2007)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/08/08.png)
-
-## 07 (2007)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/07/07.png)
-
-## 06 (2007)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/06/06.jpg)
-
-## 05 (2006)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/05/05-01.jpg)
-- [Screenshot #02](https://sparanoid.com/lab/version/05/05-02.jpg)
-
-## 04 (2006)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/04/04.jpg)
-
-## 03 (2006)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/03/03.png)
-
-## 02 (2005)
-
-Source code not available
-
-- [Screenshot #01](https://sparanoid.com/lab/version/02/02.jpg)
-
-## 01 (2005)
-
-Source code not available
-
-- Initial release
-
-[head]:         https://sparanoid.com/
-[23.0.0]:       https://sparanoid.com/lab/version/23/
-[22.0.0]:       https://sparanoid.com/lab/version/22/
-[21-finale]:    https://sparanoid.com/lab/version/21-finale/
-[20.1-finale]:  https://sparanoid.com/lab/version/20.1-finale/
-[20.1]:         https://sparanoid.com/lab/version/20.1/
-[20]:           https://sparanoid.com/lab/version/20/
-[19.3-finale]:  https://sparanoid.com/lab/version/19.3-finale/
-[19.3]:         https://sparanoid.com/lab/version/19.3/
-[19.2]:         https://sparanoid.com/lab/version/19.2/
-[19.1]:         https://sparanoid.com/lab/version/19.1/
-[19]:           https://sparanoid.com/lab/version/19/
-[18-finale]:    https://sparanoid.com/lab/version/18-finale/
-[18]:           https://sparanoid.com/lab/version/18/
-[17]:           https://sparanoid.com/lab/version/17/
-[16]:           https://sparanoid.com/lab/version/16/
-[15]:           https://sparanoid.com/lab/version/15/
-[14]:           https://sparanoid.com/lab/version/14/
+### Maintenance
+
+* Move contents of `gh-pages` branch to `master` inside of the `/docs` folder.
+
+## [4.0.4](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.0.4)
+
+### Enhancements
+
+* "Gemify" theme ~> `gem "minimal-mistakes-jekyll"`
+* Replace `base_path` include with `absolute_url` filter where possible.
+* Allow images to be placed in other folders. Remove `/images/` only restriction and encourage placement in `/assets/images/` instead. **Full paths are now required. If upgrading from MM 3.4 add `/images/` before filenames in Front Matter and `_config.yml` variables.**
+* Add [home `layout`](https://github.com/mmistakes/minimal-mistakes/blob/master/_layouts/home.html)
+* Added missing Turkish translations for UI text. [#621](https://github.com/mmistakes/minimal-mistakes/pull/621)
+* Make author avatar optional in sidebar.
+* Update **/\_includes/seo.html** for meta description. [#558](https://github.com/mmistakes/minimal-mistakes/pull/558)
+
+### Bug Fixes
+
+* Fix navigation bar animation "flicker" in Safari [#568](https://github.com/mmistakes/minimal-mistakes/issues/568)
+* Fix `author.avatar` paths for externally hosted images.
+
+### Maintenance
+
+* Add documentation around `gem "minimal-mistakes-jekyll"` installation and use.
+* Add note about using full image paths for eg. `assets/images/filename.jpg` (header images, overlays, galleries, feature rows, etc.) instead of assuming they will always be in `/images/`.
+* Add "[Overriding Theme Defaults](https://mmistakes.github.io/minimal-mistakes/docs/overriding-theme-defaults/)" page to documentation.
+
+## [3.4.8](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.8)
+
+### Enhancements
+
+* Improve type readability for larger viewports by bumping up base `font-size`. [#533](https://github.com/mmistakes/minimal-mistakes/issues/533)
+* Update Portuguese localized UI text. [#541](https://github.com/mmistakes/minimal-mistakes/pull/541)
+* Add `page.title` and via parameter to Twitter share link. [#538](https://github.com/mmistakes/minimal-mistakes/pull/538)
+
+### Bug Fixes
+
+* Fix Last.fm author profile URL. [#540](https://github.com/mmistakes/minimal-mistakes/pull/540)
+
+### Maintenance
+
+* Move Brazilian Portuguese localized text under `pt-BR` key.
+
+## [3.4.7](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.7)
+
+### Enhancements
+
+* Add `layout` based and user-defined class names to `<body>` element for added CSS hooks. [#526](https://github.com/mmistakes/minimal-mistakes/pull/526)
+* Add simplified Chinese localized UI text. [#532](https://github.com/mmistakes/minimal-mistakes/pull/532)
+
+### Bug Fixes
+
+* Remove duplicate include of `base_path` in category-list.html [#522](https://github.com/mmistakes/minimal-mistakes/pull/522)
+
+## [3.4.6](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.6)
+
+### Enhancements
+
+* Add Italian "comments" related localized UI text. [#514](https://github.com/mmistakes/minimal-mistakes/pull/514)
+
+### Bug Fixes
+
+* Disable `compress` HTML layout by default. To enable add `layout: compress` to `_layouts/default.html`.
+
+## [3.4.5](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.5)
+
+### Enhancements
+
+* Improve line numbered code block styling when using `{% highlight linenos %}` tag. [#513](https://github.com/mmistakes/minimal-mistakes/issues/513)
+* Add English fallback to "Follow" button label. [#496](https://github.com/mmistakes/minimal-mistakes/pull/496)
+
+### Bug Fixes
+
+* Fix Firefox alignment issues with code blocks generated with the `{% highlight %}` tag. [#512](https://github.com/mmistakes/minimal-mistakes/issues/512)
+
+### Maintenance
+
+- Clarified comment for `author.stackoverflow` value used in author sidebar links. [#487](https://github.com/mmistakes/minimal-mistakes/pull/487)
+- Add list of localized text strings. [#488](https://github.com/mmistakes/minimal-mistakes/pull/488)
+- Add `{% highlight %}` code block examples to demo site.
+- Add documentation for using custom sidebar navigation menus. [#476](https://github.com/mmistakes/minimal-mistakes/issues/476)
+
+## [3.4.4](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.4)
+
+### Enhancements
+
+- Add French "comments" related localized UI text. [#472](https://github.com/mmistakes/minimal-mistakes/pull/472)
+
+### Bug Fixes
+
+- Exclude `vendor` in Jekyll config file.
+- Fix Liquid syntax error for offending parenthesis. [#479](https://github.com/mmistakes/minimal-mistakes/issues/479)
+
+### Maintenance
+
+- Update gems: `colorator` (1.1.0), `forwardable-extended` (2.6.0), `github-pages` (93), `jekyll` (= 3.2.1), `minima` (= 1.0.1).
+
+## [3.4.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.3)
+
+### Enhancements
+
+- Make ["honeypot" `input`](https://github.com/mmistakes/minimal-mistakes/commit/06a8249a69a37dddda7e2a5bfbe32056c1a9a607) in Staticman comment form less obvious to spam bots
+- Add padding to `.highlight` code blocks to better [align `overflow` scrollbar](https://github.com/mmistakes/minimal-mistakes/commit/e4abec0a6f7f8cff72505ca0754615df294fd5b3) to the bottom.
+- Add additional image options for Twitter card social sharing meta tags. [#466](https://github.com/mmistakes/minimal-mistakes/pull/466)
+- Add structured data markup for Staticman comments. [#458](https://github.com/mmistakes/minimal-mistakes/issues/458)
+
+### Bug Fixes
+
+- Format `og:locale` tag with `_` instead of `-`. [#462](https://github.com/mmistakes/minimal-mistakes/issues/462)
+
+### Maintenance
+
+- Add note to docs about using `url: http://localhost:4000` when working locally.
+
+## [3.4.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.2)
+
+### Enhancements
+
+- Improve UX of static comment forms. [#448](https://github.com/mmistakes/minimal-mistakes/issues/448)
+
+## [3.4.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.1)
+
+### Enhancements
+
+- Add `staticman.filename` configuration with UNIX timestamp for sorting data files. example ~> `comment-1470943149`.
+
+### Bug Fixes
+
+- Don't add `<a>` to author name if URL is blank.
+
+## [3.4.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.4.0)
+
+### Enhancements
+
+- Support static-based commenting via [Staticman](https://staticman.net/) for sites hosted with GitHub Pages. [#424](https://github.com/mmistakes/minimal-mistakes/issues/424)
+
+## [3.3.7](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.7)
+
+### Bug Fixes
+
+- Re-enabled Jekyll plugins in `_config.yml` in case they aren't autoloaded in `Gemfile`. [#417](https://github.com/mmistakes/minimal-mistakes/issues/417)
+
+### Enhancements
+
+- Fallback to `site.github.url` for use in `{{ base_path }}` when `site.url` is `nil`.
+- Replace Sass and Autoprefixer `npm` build scripts with [Jekyll's built-in asset support](https://jekyllrb.com/docs/assets/). [#333](https://github.com/mmistakes/minimal-mistakes/issues/333)
+
+### Maintenance
+
+- Document `site.repository` and its role with [`github-metadata`](https://github.com/jekyll/github-metadata) gem.
+- Add sample [archive page with content](https://mmistakes.github.io/minimal-mistakes/archive-layout-with-content/) for testing styles on demo site.
+
+## [3.3.6](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.6)
+
+### Bug Fixes
+
+- Fix blank `site.teaser` bug. [#412](https://github.com/mmistakes/minimal-mistakes/issues/412)
+
+## [3.3.5](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.5)
+
+### Enhancements
+
+- Add English default text `site.locale` strings. [#407](https://github.com/mmistakes/minimal-mistakes/issues/407)
+- Add Portuguese localized UI text. [#411](https://github.com/mmistakes/minimal-mistakes/pull/411)
+- Add Italian localized UI text. [#409](https://github.com/mmistakes/minimal-mistakes/pull/409)
+
+### Maintenance
+
+- Remove unused Google AdSense variables in `_config.yml`. [#404](https://github.com/mmistakes/minimal-mistakes/issues/404)
+- Update `Gemfile` instructions for using `github-pages` vs. native `jekyll` gems.
+- Disable `gems:` in `_config.yml` and enable plugins with Bundler instead.
+- Add `repository` to `_config.yml` to suppress GitHub Pages error `Liquid Exception: No repo name found.`
+
+## [3.3.4](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.4)
+
+### Enhancements
+
+- Add support for configurable feed URL to use a service like FeedBurner instead of linking directly to `feed.xml` in `<head>` and the site footer. [#378](https://github.com/mmistakes/minimal-mistakes/issues/378), [#379](https://github.com/mmistakes/minimal-mistakes/pull/379), [#406](https://github.com/mmistakes/minimal-mistakes/pull/406)
+- Add Turkish localized UI text. [#403](https://github.com/mmistakes/minimal-mistakes/pull/403)
+
+### Maintenance
+
+- Update gems: `activesupport` (4.2.7), `ffi` (1.9.14), `github-pages` (88), `jekyll-redirect-from` (0.11.0), `jekyll-watch` (1.5.0).
+
+## [3.3.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.3)
+
+### Enhancements
+
+- Make footer stick to the bottom of the page.
+
+### Bug Fixes
+
+- Fix `gallery` size bug [#402](https://github.com/mmistakes/minimal-mistakes/issues/402)
+
+### Maintenance
+
+- Set default `lang` to `en`.
+
+## [3.3.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.2)
+
+### Bug Fixes
+
+- Fix JavaScript that triggers "sticky" sidebar to avoid layout issues on screen sizes < `1024px`. [#396](https://github.com/mmistakes/minimal-mistakes/issues/396)
+
+## [3.3.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.3.1)
+
+### Enhancements
+
+- Enable image popup on < 500px wide screens. [#385](https://github.com/mmistakes/minimal-mistakes/issues/385)
+- Indicate the relationship between component URLs in a paginated series by applying `rel="prev"` and `rel="next"` to pages that use `site.paginator`. [#253](https://github.com/mmistakes/minimal-mistakes/issues/253)
+- Improve link posts in archive listings. [#276](https://github.com/mmistakes/minimal-mistakes/issues/276)
+
+### Maintenance
+
+- Update gems: `github-pages` (86), `ffi` 1.9.13, `jekyll-mentions` 1.1.3, and `rouge` 1.11.1
+- Fix note about custom sidebar content appearing below author profile. [#388](https://github.com/mmistakes/minimal-mistakes/issues/388)
+
+## [3.2.13](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.13)
+
+### Enhancements
+
+- Add English default UI text for Canada, Great Britain, and Australia. [#377](https://github.com/mmistakes/minimal-mistakes/issues/377)
+- Switch default locale from `en-US` to `en`.
+
+## [3.2.12](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.12)
+
+### Enhancements
+
+- Remove window width "magic number" from sticky sidebar check in `main.js` for improved flexibility. [#375](https://github.com/mmistakes/minimal-mistakes/pull/375)
+
+### Bug Fixes
+
+- Fix author override conditional where a missing `authors.yml` would show broken sidebar content. Defaults to `site.author`. [#376](https://github.com/mmistakes/minimal-mistakes/pull/376)
+
+## [3.2.11](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.11)
+
+### Bug Fixes
+
+- Fix disappearing author sidebar links [#372](https://github.com/mmistakes/minimal-mistakes/issues/372)
+
+### Maintenance
+
+- Update gems: `github-pages` (84), `jekyll-github-metadata` 2.0.2, and `kramdown` 1.11.1
+- Update vendor JavaScript: jQuery 1.12.4, Stickyfill.js 1.1.4
+- Update Font Awesome 4.6.3
+
+## [3.2.10](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.10)
+
+### Maintenance
+
+- Add `CONTRIBUTING.md`
+
+## [3.2.9](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.9)
+
+### Enhancements
+
+- Add support for [header overlay images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#header-overlay) for Open Graph images. [#358](https://github.com/mmistakes/minimal-mistakes/pull/358)
+
+### Bug Fixes
+
+- Fix `Person` typo Schema.org type [#358](https://github.com/mmistakes/minimal-mistakes/pull/358)
+
+### Maintenance
+
+- Update `github-pages` gem and dependencies.
+- Remove `minutes_read` to avoid awkward reading time wording [#356](https://github.com/mmistakes/minimal-mistakes/issues/356)
+
+## [3.2.8](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.8)
+
+### Bug Fixes
+
+- Remove `cursor: pointer` that appears on white-space surrounding author side list items and links. [#354](https://github.com/mmistakes/minimal-mistakes/pull/354)
+
+### Maintenance
+
+- Add contributing information to `README.md`. [#357](https://github.com/mmistakes/minimal-mistakes/issues/357)
+
+## [3.2.7](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.7)
+
+### Enhancements
+
+- Add French localized UI text. [#346](https://github.com/mmistakes/minimal-mistakes/pull/346)
+
+### Bug Fixes
+
+- Fix branch logic for Yandex and Alexa in `seo.html`. [#348](https://github.com/mmistakes/minimal-mistakes/pull/348)
+
+## [3.2.6](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.6)
+
+### Bug Fixes
+
+- Fix error `Liquid Exception: divided by 0 in _includes/archive-single.html, included in _layouts/single.html` caused by null `words_per_minute` in `_config.yml`. [#345](https://github.com/mmistakes/minimal-mistakes/pull/345)
+
+## [3.2.5](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.5)
+
+### Bug Fixes
+
+- Fix link color in hero overlay to be white.
+- Remove underlines from archive item titles.
+
+## [3.2.4](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.4)
+
+### Enhancements
+
+- Improve text alignment of masthead, hero overlay, page footer to be flush left and remove awkward white-space gaps. [#342](https://github.com/mmistakes/minimal-mistakes/issues/342)
+- Add Spanish localized UI text. [#338](https://github.com/mmistakes/minimal-mistakes/pull/338)
+
+### Bug Fixes
+
+- Fix alignment of icons in author sidebar [#341](https://github.com/mmistakes/minimal-mistakes/issues/341)
+
+### Maintenance
+
+- Add background color to page footer to set it apart from main content. [#342](https://github.com/mmistakes/minimal-mistakes/issues/342)
+- Add terms and privacy policy to theme's demo site. [#343](https://github.com/mmistakes/minimal-mistakes/issues/343)
+- Update screenshots found in theme documentation.
+
+## [3.2.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.3)
+
+### Enhancements
+
+- Add [Discourse](https://www.discourse.org/) as a commenting provider. [#335](https://github.com/mmistakes/minimal-mistakes/pull/335)
+
+## [3.2.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.2)
+
+### Enhancements
+
+- Add support for image captions in Magnific Popup overlays via the [`gallery`](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery) helper. [#334](https://github.com/mmistakes/minimal-mistakes/issues/334)
+
+## [3.2.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.1)
+
+### Bug Fixes
+
+- Remove need for "double tapping" masthead menu links on iOS devices. [#315](https://github.com/mmistakes/minimal-mistakes/issues/315)
+
+### Maintenance
+
+- Add `ISSUE_TEMPLATE.md` for improve issue submission process.
+
+## [3.2.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.2.0)
+
+### Bug Fixes
+
+- Fix missing category/tag links in post footer due to possible conflict with `site.tags` and `site.categories`. [#329](https://github.com/mmistakes/minimal-mistakes/issues/329#issuecomment-222375568)
+
+## [3.1.8](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.8)
+
+### Bug Fixes
+
+- Fix `Liquid Exception: undefined method 'gsub' for nil:NilClass in _layouts/single.html` error when `page.title` is null. `<h1>` element is now conditional if `title:` is not set for a `page` or collection item. [#312](https://github.com/mmistakes/minimal-mistakes/issues/312)
+
+### Maintenance
+
+- Remove duplicate `fa-twitter` and `fa-twitter-square` classes from `_utilities.scss`. [#302](https://github.com/mmistakes/minimal-mistakes/issues/302)
+
+- Document installing additional Jekyll gem dependencies when using `gem "jekyll"` instead of `gem "github-pages"` to avoid any errors on run. [#305](https://github.com/mmistakes/minimal-mistakes/issues/305)
+
+## [3.1.7](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.7)
+
+### Enhancements
+
+- Add translation key for "Recent Posts" used in home page `index.html`. [#316](https://github.com/mmistakes/minimal-mistakes/pull/316)
+
+### Maintenance
+
+- Small fix to avoid underlying the whitespace between icons and related text when hovering. [#303](https://github.com/mmistakes/minimal-mistakes/pull/303)
+
+## [3.1.6](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.6)
+
+### Maintenance
+
+- Update gem dependencies. Run `bundle` to update `Gemfile.lock`.
+
+## [3.1.5](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.5)
+
+### Maintenance
+
+- Fix `www` and `https` links in author profile include [#293](https://github.com/mmistakes/minimal-mistakes/pull/293)
+
+## [3.1.4](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.4)
+
+### Enhancements
+
+- Add overlay_filter param to hero headers [#298](https://github.com/mmistakes/minimal-mistakes/pull/298)
+
+## [3.1.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.3)
+
+### Enhancements
+
+- Improve `site.locale` documentation [#284](https://github.com/mmistakes/minimal-mistakes/issues/284)
+- Remove ProTip note about protocol-less `site.url` as it is an anti-pattern [#288](https://github.com/mmistakes/minimal-mistakes/issues/288)
+
+### Bug Fixes
+
+- Fix `og_image` URL in seo.html [#277](https://github.com/mmistakes/minimal-mistakes/issues/277)
+- Fix `author_profile` toggle when assigned in a `_layout` [#285](https://github.com/mmistakes/minimal-mistakes/issues/285)
+- Fix typo in `build:all` npm script [#283](https://github.com/mmistakes/minimal-mistakes/pull/283)
+- Fix URL typo documentation [#287](https://github.com/mmistakes/minimal-mistakes/issues/287)
+- SEO author bug. If `twitter.username` is set and `author.twitter` is `nil` bad things happen. [#289](https://github.com/mmistakes/minimal-mistakes/issues/289)
+
+## [3.1.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.2)
+
+### Enhancements
+
+- Explain how to use `nav_list` helper in [documentation](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list).
+- Reduce left/right padding on smaller screens to increase width of main content column.
+
+### Bug Fixes
+
+- Fix alignment issues with related posts [#273](https://github.com/mmistakes/minimal-mistakes/issues/273) and "Follow" button in author profile [#274](https://github.com/mmistakes/minimal-mistakes/issues/274).
+
+## [3.1.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.1)
+
+### Bug Fix
+
+- Fixed reading time bug when `words_per_minute` wasn't set in `_config.yml` [#271](https://github.com/mmistakes/minimal-mistakes/issues/271)
+
+## [3.1.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.1.0)
+
+### Enhancements
+
+- Updated [Font Awesome](https://fortawesome.github.io/Font-Awesome/whats-new/) to version 4.6.1
+- Added optional GitHub and Bitbucket links to footer if set on `site.author` in `_config.yml`.
+
+### Bug Fixes
+
+- Fixed Bitbucket URL typo in author sidebar.
+
+## [3.0.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/3.0.3)
+
+### Enhancements
+
+- Rebuilt the entire theme: layouts, includes, stylesheets, scripts, you name it.
+- Refreshed the look and feel while staying true to the original design of the theme (author sidebar/main content).
+- Replaced grid system with [Susy](http://susy.oddbird.net/).
+- Replaced Grunt tasks with `npm` scripts.
+- Removed Google Fonts and replaced with system fonts to improve performance (they can be [added back](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/) if desired)
+- Greatly improved [theme documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
+- Increased the amount of sample posts, sample pages, and sample collections to throughly test the theme and edge-cases.
+- Moved all sample content and assets out of `master` to keep it as clean as possible for forking.
+- Added new layouts for `splash` pages, archives for [`jekyll-archives`](https://github.com/jekyll/jekyll-archives) if enabled, and [`compress.html`](https://github.com/penibelst/jekyll-compress-html) to improve performance.
+- Added taxonomy links to posts (tags and categories).
+- Added optional "reading time" meta data.
+- Improved Liquid used for Twitter Cards and Open Graph data in `<head>`.
+- Improved `gallery` include helper and added `feature_row` for use with splash page layout.
+- Added Keybase.io, author web URI, and Bitbucket optional links to sidebar.
+- Add `feed.xml` link to footer.
+- Added a [UI text data file](https://mmistakes.github.io/minimal-mistakes/docs/ui-text/) to easily change all text found in the theme.
+- Added LinkedIn to optional social share buttons.
+- Added Facebook, Google+, and custom commenting options in addition to Disqus.
+- Added optional breadcrumb links.
+
+## [2.2.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/2.2.1)
+
+## [2.2.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/2.2.0)
+
+### Enhancements
+
+- Add support for Jekyll 3.0
+- Minor updates to syntax highlighting CSS and theme documentation
+
+## [2.1.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/2.1.3)
+
+### Enhancements
+
+- Cleaner print styles that remove the top navigation, social sharing buttons, and other elements not needed when printed.
+
+## [2.1.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/2.1.2)
+
+### Enhancements
+
+- Add optional CodePen icon/url to author side bar [#156](https://github.com/mmistakes/minimal-mistakes/pull/156)
+- Documented Stackoverflow username explanation in `_config.yml` [#157](https://github.com/mmistakes/minimal-mistakes/pull/157)
+- Simplified Liquid in `post-index.html` to better handle year listings [#166](https://github.com/mmistakes/minimal-mistakes/pull/166)
+
+### Bug Fixes
+
+- Cleanup Facebook related Open Graph meta tags [#149](https://github.com/mmistakes/minimal-mistakes/issues/149)
+- Corrected minor typos [#158](https://github.com/mmistakes/minimal-mistakes/pull/158) [#175](https://github.com/mmistakes/minimal-mistakes/issues/175)
+
+## [2.1.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/2.1.1)
+
+### Enhancements
+
+- Add optional XING profile link to author sidebar
+- Include open graph meta tags for feature image (if assigned) [#149](https://github.com/mmistakes/minimal-mistakes/issues/149)
+- Create an include for feed footer
+
+### Bug Fixes
+
+- Remove http protocol from Google search form on sample 404 page
+- Only show related posts if there are one or more available
+- Fix alignment of email address link in author sidebar
+
+## [2.1.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/2.1.0)
+
+### Enhancements
+
+- Add optional social sharing buttons ([#42](https://github.com/mmistakes/minimal-mistakes/issues/42))
+
+![social sharing buttons](https://cloud.githubusercontent.com/assets/1376749/5860522/d9f28a96-a22f-11e4-9b83-940a3a9a766a.png)
+
+- Add Soundcloud, YouTube ([#95](https://github.com/mmistakes/minimal-mistakes/pull/95)), Flickr ([#119](https://github.com/mmistakes/minimal-mistakes/pull/119)), and Weibo ([#116](https://github.com/mmistakes/minimal-mistakes/pull/116)) icons for use in author sidebar.
+- Fix typos in posts and documentation and remove references to Less
+- Include note about Octopress gem being optional
+- Post author override support extended to the Atom feed ([#71](https://github.com/mmistakes/minimal-mistakes/pull/71))
+- Only include email address in feed if specified in `_config.yml` or author `_data`
+- Wrap all page content in `#main` to harmonize article and post index styles ([#86](https://github.com/mmistakes/minimal-mistakes/issues/86))
+- Include new sample feature images for posts and pages
+- Table of contents improvements: fix collapse toggle, indent nested elements, show on small screens, and create an `_include` for reusing in posts and pages.
+- Include note about running Jekyll with `bundle exec` when using Bundler
+- Fix home page path in top navigation
+- Remove Google Authorship ([#120](https://github.com/mmistakes/minimal-mistakes/issues/120))
+- Remove duplicate author content that displayed in `div.article-author-bottom`
+- Removed unused `_sass/print.scss` styles
+- Improve comments in `.scss` files
+
+## [2.0.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/v2.0)
+
+## [1.3.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/1.3.3)
+
+### Enhancements
+
+- Added new icons and profile links for Stackoverflow, Dribbble, Pinterest, Foursquare, and Steam to the author bio sidebar.
+- Cleaned up the Kramdown auto table of contents styling to be more readable
+- Removed page width specific .less stylesheets and created mixins for easier updating
+- Removed Modernizr since it wasn't being used
+- Added pages to sitemap.xml
+- Added category: to rake new_post task
+- Minor typographic changes
+
+### Bug Fixes
+
+- Corrected various broken links in README and Theme Setup.
+
+## [1.3.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/1.3.1)
+
+### Enhancements
+
+- Cleaned up table of contents styling
+- Reworked top navigation to be a better experience on small screens. Nav items now display vertically when the menu button is tapped, revealing links with larger touch targets.
+
+![menu animation](https://camo.githubusercontent.com/3fbd8c1326485f4b1ab32c0005c0fca7660b5d31/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313337363734392f323136343037352f31653366303663322d393465372d313165332d383961612d6436623636376562306564662e676966)
+
+## [1.2.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/1.2.0)
+
+### Bug Fixes
+
+- Table weren't filling the entire width of the content container. They now scale at 100%. Thanks [@dhruvbhatia](https://github.com/dhruvbhatia)
+
+### Enhancements
+
+- Decreased spacing between Markdown footnotes
+- Removed dark background on footer
+- Removed UPPERCASE styling on post titles in the index listing
+
+## [1.1.4](https://github.com/mmistakes/minimal-mistakes/releases/tag/1.1.4)
+
+### Bug Fixes
+
+- Fix top navigation bug issue ([#10](https://github.com/mmistakes/minimal-mistakes/issues/10)) for real this time. Remember to clear your floats kids.
+
+## [1.1.3](https://github.com/mmistakes/minimal-mistakes/releases/tag/1.1.3)
+
+### Bug Fixes
+
+- Fix top navigation links that weren't click able on small viewports (Issue [#10](https://github.com/mmistakes/minimal-mistakes/issues/10)).
+- Remove line wrap from top navigation links that may span multiple lines.
+
+## [1.1.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/1.1.2)
+
+### Enhancements
+
+- Added Grunt build script for compiling Less/JavaScript and optimizing image assets.
+- Added support for large image summary Twitter card.
+- Stylesheet adjustments
+
+## [1.1.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/1.1.1)
+
+### Bug Fixes
+
+- Removed [Typeplate](http://typeplate.com/) styles. Was [causing issues with newer versions of Less](https://github.com/typeplate/typeplate.github.io/issues/108) and is no longer maintained.
+
+### Enhancements
+
+- Added [image attribution](http://mmistakes.github.io/minimal-mistakes/theme-setup/#feature-images) for post and page feature images.
+- Added [404 page](http://mmistakes.github.io/minimal-mistakes/404.html).
+- Cleaned up various Less variables to better align with naming conventions used in other MM Jekyll themes.
+- Removed Chrome Frame references.
+- Added global CSS3 transitions to text and block elements.
+- Improved typography in a few places.
+
+## [1.0.2](https://github.com/mmistakes/minimal-mistakes/releases/tag/v1.0.2)
+
+### Enhancements
+
+- Google Analytics, Google Authorship, webmaster verifies, and Twitter card meta are now optional.
+
+## [1.0.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/v1.0.1)
